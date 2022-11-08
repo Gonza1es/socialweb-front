@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #EFEFEF;
   display: flex;
   align-items: center;
   align-content: center;
