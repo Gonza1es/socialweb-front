@@ -1,4 +1,3 @@
-
 import './App.css';
 import {Auth} from "./auth/Auth";
 
