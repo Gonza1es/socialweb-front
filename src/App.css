@@ -4,10 +4,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #EFEFEF;
+  background-color: #EFEFEFEF;
   display: flex;
   align-items: center;
-  align-content: center;
-  justify-content: center;
+  /*align-content: center;*/
+  /*justify-content: center;*/
   overflow: auto;
+  flex-direction: column;
 }
