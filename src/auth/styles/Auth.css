@@ -17,10 +17,12 @@
     top: 15%;
     right: 10%;
     max-width: 521px;
+    min-height: 540px;
     height: 70%;
     width: 30%;
     font-family: Serif, sans-serif;
     text-align: center;
+    overflow-style: marquee-block;
     position: absolute;
 }
 
@@ -76,6 +78,7 @@
     line-height: 28px;
     background-color: rgba(191, 204, 88, 1.0);
     mix-blend-mode: darken;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .auth-form #forgot-password {
@@ -110,9 +113,7 @@
     line-height: 24px;
 }
 
-
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px){
 
     img {
         display: none;
@@ -126,6 +127,7 @@
         text-align: center;
         position: relative;
     }
+
     .auth-form #login-register {
         font-size: 14px;
     }

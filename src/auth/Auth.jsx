@@ -1,5 +1,5 @@
 import logo from "./Лого.svg"
-import "./styles/auth.css"
+import "./styles/Auth.css"
 import {Form} from "./components/Form";
 
 export function Auth() {

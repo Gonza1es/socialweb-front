@@ -1,0 +1,61 @@
+.post-reaction-block-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #464C54;
+}
+
+.like-button-wrapper, .comment-button-wrapper {
+    display: flex;
+    flex-basis: 7%;
+    margin: auto;
+}
+
+.report-button-wrapper {
+    display: flex;
+    flex-basis: 80%;
+    justify-content: flex-end;
+}
+
+.like-button, .comment-button {
+    flex-grow: 1;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.like-button span, .comment-button span {
+    display: flex;
+    align-self: center;
+    margin: auto 0;
+}
+
+.like-button, .comment-button, .report-button {
+    display: flex;
+    border: none;
+    border-radius: 20px;
+}
+
+.like-button span, .comment-button span {
+    display: inline-flex;
+    margin: 10px;
+}
+
+.report-button {
+    background-color: #BFCC58;
+}
+
+.report-button span {
+    display: inline-flex;
+    margin: auto;
+    color: #464C54;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.like-button img, .comment-button img {
+    margin: auto;
+    height: 30px;
+}

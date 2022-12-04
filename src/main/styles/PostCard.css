@@ -1,0 +1,96 @@
+.post-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #464C54;
+}
+
+.post-card-data {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-metadata {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+.post-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-miniature {
+    display: flex;
+    align-self: flex-start;
+    margin-right: 10px;
+}
+
+.post-owner-name {
+    display: flex;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.post-meta-delimiter {
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 70%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.post-date {
+    display: flex;
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 70%;
+    margin: 0;
+}
+
+.post-text {
+    display: flex;
+}
+
+.post-text span {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.post-card-media {
+    display: flex;
+    justify-content: center;
+}
+
+.post-card-media img {
+    width: 100%;
+    height: auto;
+}
+
+.post-card-wrapper .avatar {
+    --size: 80px;
+}
+
+.post-card-wrapper .avatar .img {
+    border: 5px solid #FFFFFF;
+}
+
+.post-card-wrapper .avatar .badge {
+    width: 11px;
+    height: 11px;
+    right: 10px;
+    bottom: 8px;
+}
+
+.post-card-reaction {
+    display: flex;
+}
+
+.post-card-comments {
+    display: flex;
+}
