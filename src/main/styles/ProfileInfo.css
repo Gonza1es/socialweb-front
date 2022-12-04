@@ -1,0 +1,106 @@
+.profile-info-wrapper {
+    display: flex;
+    width: 75%;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: inherit;
+    color: #464C54;
+}
+
+.profile-images-group {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.profile-cover img {
+    /*width: 100%;*/
+    /*object-position: 20% 10%; !* try 20px 10px *!*/
+    /*height: auto;*/
+    /*max-height: 200px;*/
+    /*object-fit: scale-down;*/
+    /*object-position: center;*/
+
+}
+
+.profile-images-group .profile-cover {
+    /*object-fit: cover;*/
+    /*object-position: center;*/
+    height: 200px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("../static-tests/test-av.png");
+    background-size: cover;
+
+}
+
+.profile-images-group .profile-avatar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.profile-info {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+
+.profile-info .dummy {
+    display: flex;
+    width: 175px;
+    margin: 0;
+    height: 80px;
+}
+
+.profile-name-wrapper {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.profile-name {
+    display: flex;
+    margin: auto;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.profile-status {
+    display: flex;
+    margin-left: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    opacity: 80%;
+}
+
+.subscribers {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.subscribers .label {
+    font-weight: 600;
+    opacity: 70%;
+}
+
+.subscribers .count {
+    font-weight: 700;
+}
+
+.profile-action-button {
+    display: flex;
+    margin: auto;
+}

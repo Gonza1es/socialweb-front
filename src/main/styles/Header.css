@@ -5,7 +5,7 @@
     position: static;
     flex-direction: row;
     /*align-self: flex-start;*/
-    width: 80%;
+    width: 75%;
 }
 
 .header, .header-logo, .header-navbar {

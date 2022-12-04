@@ -1,0 +1,81 @@
+.post-creator-wrapper {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    width: 75%;
+    background-color: rgba(98, 113, 72, 0.2);
+    align-items: center;
+    border-radius: 10px;
+}
+
+.post-creator-wrapper .miniature-wrapper {
+    display: flex;
+    flex-basis: 10%;
+}
+
+.post-creator-body {
+    display: flex;
+    flex-basis: 90%;
+}
+
+.post-creator-input {
+    display: flex;
+    flex-basis: 80%;
+}
+
+.post-creator-input textarea {
+    /** Нужно проработать переполнение, но потом **/
+    display: flex;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/*.post-creator-input textarea::placeholder {*/
+/*    !*margin-top: auto;*!*/
+/*    margin: auto;*/
+/*}*/
+
+
+.post-creator-photo-button {
+    border: none;
+    background-color: transparent;
+    margin: auto;
+}
+
+.post-creator-publish-button {
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #627148;
+    margin-left: 10px;
+    margin-right: 2%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    height: min-content;
+    align-self: center;
+}
+
+.post-creator-publish-button span {
+    display: inline-flex;
+    margin: 10px;
+}
+
+.post-creator-wrapper .avatar {
+    --size: 73px;
+}
+
+.post-creator-wrapper .avatar .img {
+    border: 3px solid #FFFFFF;
+}
+
+.post-creator-wrapper .avatar .badge {
+    display: none;
+}
