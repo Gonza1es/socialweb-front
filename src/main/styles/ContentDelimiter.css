@@ -23,6 +23,6 @@
 }
 
 .delimiter-line {
-    stroke: #464C54;
-    stroke-width: 2px;
+    stroke: rgba(70, 76, 84, 0.75);
+    stroke-width: 3px;
 }
