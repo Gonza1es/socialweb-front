@@ -1,8 +1,8 @@
-.subscribe-button-wrapper {
+.edit-button-wrapper {
     display: flex;
 }
 
-.subscribe-button {
+.edit-button {
     display: flex;
     flex-direction: row;
     font-size: 25px;
@@ -13,13 +13,7 @@
     border: none;
 }
 
-.subscribe-button .button-img {
-    display: flex;
-    align-self: center;
-    margin: 10px;
-}
-
-.subscribe-button .button-text {
+.edit-button .button-text {
     display: flex;
     align-self: center;
     margin: 10px;

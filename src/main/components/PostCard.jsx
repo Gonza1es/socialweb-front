@@ -3,15 +3,21 @@ import testAv from '../static-tests/test-av.png';
 import {Avatar} from "./Avatar";
 import {PostReactionsBlock} from "./PostReactionsBlock";
 import landcape from '../static-tests/landscape.png'
+import {CommentCard} from "./CommentCard";
 
-
+/**
+ * @description Компонент карточки поста
+ * @param props.text текст поста
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function PostCard(props) {
     return (
         <div className="post-card-wrapper">
 
             <div className="post-card-data">
                 <div className="post-miniature">
-                    <Avatar avatar={testAv}/>
+                    <Avatar img={testAv}/>
                 </div>
 
                 <div className="post-body">
@@ -29,7 +35,7 @@ export function PostCard(props) {
                     </div>
 
                     <div className="post-text">
-                        <span>{props.postText}</span>
+                        <span>{props.text}</span>
                     </div>
                 </div>
             </div>
@@ -45,6 +51,7 @@ export function PostCard(props) {
             </div>
 
             <div className="post-card-comments">
+                <CommentCard/>
             </div>
 
         </div>

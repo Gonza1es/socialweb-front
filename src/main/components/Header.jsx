@@ -1,7 +1,11 @@
 import '../styles/Header.css'
 import logo from '../logo.svg'
 
-
+/**
+ * @description Хедер с логотипом и нав. баром
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function Header() {
     return (
         <div className="header-wrapper">

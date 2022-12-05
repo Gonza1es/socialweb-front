@@ -2,6 +2,11 @@ import {useState} from "react";
 import okLogo from '../okLogo.svg';
 import '../styles/SubscribeButton.css';
 
+/**
+ * @description Компонент кнопки "Подписаться"
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function SubscribeButton() {
 
     const [buttonText, setButtonText] = useState("Подписаться");
