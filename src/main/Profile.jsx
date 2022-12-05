@@ -3,6 +3,7 @@ import './styles/Profile.css'
 import {PostCreator} from "./components/PostCreator";
 import {PostCard} from "./components/PostCard";
 import testCover from './static-tests/test-cov.png'
+import {ContentDelimiter} from "./components/ContentDelimiter";
 
 export function Profile() {
 
@@ -12,6 +13,7 @@ export function Profile() {
         <div className="Profile">
             <ProfileInfo coverImage={testCover}/>
             <PostCreator/>
+            <ContentDelimiter delimiterText={"Мои записи"}/>
             {posts.map(item => <PostCard postText={item}/>)}
         </div>
     )
