@@ -1,0 +1,20 @@
+.edit-button-wrapper {
+    display: flex;
+}
+
+.edit-button {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    font-weight: 600;
+    color: #464C54;
+    background-color: #BFCC58;
+    border-radius: 15px;
+    border: none;
+}
+
+.edit-button .button-text {
+    display: flex;
+    align-self: center;
+    margin: 10px;
+}
