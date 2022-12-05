@@ -14,9 +14,10 @@
 
 .post-metadata {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: row;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .post-body {
@@ -37,9 +38,9 @@
 }
 
 .post-meta-delimiter {
-    font-size: 20px;
-    line-height: 24px;
-    opacity: 70%;
+    font-size: 25px;
+    line-height: 30px;
+    opacity: 70%;;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -47,7 +48,7 @@
 .post-date {
     display: flex;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 30px;
     opacity: 70%;
     margin: 0;
 }
