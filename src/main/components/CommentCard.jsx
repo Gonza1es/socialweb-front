@@ -2,6 +2,12 @@ import '../styles/CommentCard.css';
 import {Avatar} from "./Avatar";
 import girlAvatar from "../static-tests/girl.png";
 
+/**
+ * @description Компонент карточки комментария
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function CommentCard(props) {
     return (
         <div className="comment-wrapper">

@@ -3,6 +3,12 @@ import testAv from '../static-tests/test-av.png'
 import {Avatar} from "./Avatar";
 import {SubscribeButton} from "./SubscribeButton";
 
+/**
+ * @description Компонент с главной информацией о профиле
+ * @param props.coverImage изображение обложки профиля
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function ProfileInfo(props) {
     return (
         <div className="profile-info-wrapper">
@@ -17,7 +23,7 @@ export function ProfileInfo(props) {
                 </div>
 
                 <div className="profile-avatar">
-                    <Avatar online={true} avatar={testAv}/>
+                    <Avatar img={testAv} online={false}/>
                 </div>
 
             </div>

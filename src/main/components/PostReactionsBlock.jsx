@@ -3,6 +3,11 @@ import likeLogo from '../likeLogo.svg';
 import commentLogo from '../commentLogo.svg';
 import {useState} from "react";
 
+/**
+ * @description Компонент с кнопками реакций на пост
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function PostReactionsBlock() {
     return (
         <div className="post-reaction-block-wrapper">

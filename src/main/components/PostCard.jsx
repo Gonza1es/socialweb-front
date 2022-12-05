@@ -5,7 +5,12 @@ import {PostReactionsBlock} from "./PostReactionsBlock";
 import landcape from '../static-tests/landscape.png'
 import {CommentCard} from "./CommentCard";
 
-
+/**
+ * @description Компонент карточки поста
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function PostCard(props) {
     return (
         <div className="post-card-wrapper">
