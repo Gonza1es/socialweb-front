@@ -1,0 +1,28 @@
+.content-delimiter-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 25px;
+    color: #464C54;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.delimiter-text {
+    display: flex;
+}
+
+.delimiter-line-image {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    height: 3px;
+}
+
+.delimiter-line {
+    stroke: #464C54;
+    stroke-width: 2px;
+}
