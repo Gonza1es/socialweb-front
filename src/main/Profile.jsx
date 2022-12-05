@@ -4,7 +4,6 @@ import {PostCreator} from "./components/PostCreator";
 import {PostCard} from "./components/PostCard";
 import testCover from './static-tests/test-cov.png'
 import {ContentDelimiter} from "./components/ContentDelimiter";
-import {CommentCard} from "./components/CommentCard";
 
 /**
  * @description Компонент профиля
@@ -19,7 +18,7 @@ export function Profile() {
             <ProfileInfo coverImage={testCover}/>
             <PostCreator/>
             <ContentDelimiter text={"Мои записи"}/>
-            {posts.map(item => <PostCard postText={item}/>)}
+            {posts.map(item => <PostCard text={item}/>)}
         </div>
     )
 }

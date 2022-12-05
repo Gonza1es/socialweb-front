@@ -2,6 +2,8 @@ import '../styles/ProfileInfo.css'
 import testAv from '../static-tests/test-av.png'
 import {Avatar} from "./Avatar";
 import {SubscribeButton} from "./SubscribeButton";
+import {ProfileEditButton} from "./ProfileEditButton";
+import {ProfileEditor} from "./ProfileEditor";
 
 /**
  * @description Компонент с главной информацией о профиле
@@ -51,8 +53,11 @@ export function ProfileInfo(props) {
 
 
                 <div className="profile-action-button">
-                    <SubscribeButton/>
+                    {/*<SubscribeButton/>*/}
+                    <ProfileEditButton/>
                 </div>
+
+                <ProfileEditor/>
 
             </div>
         </div>

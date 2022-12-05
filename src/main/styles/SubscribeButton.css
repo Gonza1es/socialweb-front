@@ -13,13 +13,13 @@
     border: none;
 }
 
-.button-img {
+.subscribe-button .button-img {
     display: flex;
     align-self: center;
     margin: 10px;
 }
 
-.button-text {
+.subscribe-button .button-text {
     display: flex;
     align-self: center;
     margin: 10px;

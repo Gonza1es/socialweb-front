@@ -7,7 +7,7 @@ import {CommentCard} from "./CommentCard";
 
 /**
  * @description Компонент карточки поста
- * @param props
+ * @param props.text текст поста
  * @returns {JSX.Element}
  * @constructor
  */
@@ -35,7 +35,7 @@ export function PostCard(props) {
                     </div>
 
                     <div className="post-text">
-                        <span>{props.postText}</span>
+                        <span>{props.text}</span>
                     </div>
                 </div>
             </div>
