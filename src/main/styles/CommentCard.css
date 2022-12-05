@@ -1,0 +1,54 @@
+.comment-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 75%;
+    flex:1;
+    margin: 15px 0;
+}
+
+.comment-avatar-wrapper {
+    display: flex;
+    flex: 0.05;
+}
+
+.comment-body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    flex: 0.85;
+}
+
+.comment-name, .comment-text, .comment-date {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.comment-text {
+    color: rgba(70, 76, 84, 0.85);
+    margin: 3px 0;
+}
+
+.comment-date {
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(70, 76, 84, 0.75);
+}
+
+.comment-wrapper .avatar {
+    --size: 60px;
+}
+
+.comment-wrapper .avatar .img {
+    border: 3px solid #FFFFFF;
+}
+
+.comment-wrapper .avatar .badge {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 8px;
+    bottom: 6px;
+}

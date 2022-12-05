@@ -3,6 +3,7 @@ import testAv from '../static-tests/test-av.png';
 import {Avatar} from "./Avatar";
 import {PostReactionsBlock} from "./PostReactionsBlock";
 import landcape from '../static-tests/landscape.png'
+import {CommentCard} from "./CommentCard";
 
 
 export function PostCard(props) {
@@ -11,7 +12,7 @@ export function PostCard(props) {
 
             <div className="post-card-data">
                 <div className="post-miniature">
-                    <Avatar avatar={testAv}/>
+                    <Avatar img={testAv}/>
                 </div>
 
                 <div className="post-body">
@@ -45,6 +46,7 @@ export function PostCard(props) {
             </div>
 
             <div className="post-card-comments">
+                <CommentCard/>
             </div>
 
         </div>
