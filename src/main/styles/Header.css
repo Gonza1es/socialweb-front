@@ -33,27 +33,3 @@
     align-items: center;
     justify-content: flex-end;
 }
-
-.header-navbar a {
-    margin: auto;
-    outline: none;
-    text-decoration: none;
-    color: #464C54;
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 25px;
-}
-
-/*.header-navbar a:active {*/
-/*    text-decoration-line: underline;*/
-/*}*/
-
-/*.header-navbar a:hover, .header-navbar a:focus, .header-navbar a:active {*/
-/*    color: #6D7783;*/
-/*    text-decoration: underline;*/
-/*    text-underline-offset: 5px;*/
-/*}*/
-
-/*.header-navbar a:hover {*/
-/*    color: #6D7783;*/
-/*}*/

@@ -1,16 +1,17 @@
 import {useState} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 export function Form() {
-    const urlAuth = 'http://localhost:8081/api/auth/'
-    const urlContent = 'http://localhost:8081/api/content/'
+    const urlAuth = 'http://localhost:8081/api/auth/';
+    const urlContent = 'http://localhost:8081/api/content/';
     const [headerText, setHeaderText] = useState('Вход');
     const [buttonText, setButtonText] = useState('Войти');
     const [loginState, setLoginState] = useState(true);
     const [loginValue, setLoginValue] = useState("");
     const [emailValue, setEmailValue] = useState("");
     const [passwordValue, setPasswordValue] = useState("");
-    const [errorValue, setErrorValue] = useState("")
+    const [errorValue, setErrorValue] = useState("");
 
     const loginRequest = {
         username: '',
@@ -22,6 +23,9 @@ export function Form() {
         email: '',
         password: ''
     }
+
+    const testIsFirstTime = false;
+    const navigate = useNavigate();
 
     const submitHandler = async (event) => {
         event.preventDefault();
@@ -36,7 +40,12 @@ export function Form() {
                             Authorization: 'Bearer '+ response.data.token
                         }
                     }, response);
-                   alert(authAttribute.data);
+                   // alert(authAttribute.data);
+                   if (testIsFirstTime) {
+                       navigate('/additional-info');
+                   } else {
+                       navigate('/my-profile');
+                   }
             } catch {
                 alert(response.data.message);
             }
@@ -46,9 +55,9 @@ export function Form() {
             regRequest.password = passwordValue;
             try {
                 response = axios.post(urlAuth + 'registration', regRequest);
-                alert(response.data.message);
+                // alert(response.data.message);
             } catch {
-                alert(response.data.message);
+                // alert(response.data.message);
             }
         }
     }
