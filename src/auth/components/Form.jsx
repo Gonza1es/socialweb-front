@@ -40,14 +40,15 @@ export function Form() {
                             Authorization: 'Bearer '+ response.data.token
                         }
                     }, response);
-                   // alert(authAttribute.data);
+                   console.log(authAttribute.data);
                    if (testIsFirstTime) {
                        navigate('/additional-info');
                    } else {
                        navigate('/my-profile');
                    }
+                   document.cookie = "SessionId=" + response.data.token;
             } catch {
-                alert(response.data.message);
+                console.log(response.data.message);
             }
         } else {
             regRequest.username = loginValue;
@@ -55,11 +56,14 @@ export function Form() {
             regRequest.password = passwordValue;
             try {
                 response = axios.post(urlAuth + 'registration', regRequest);
-                // alert(response.data.message);
+                console.log(response.data.message);
+                document.cookie = "SessionId=" + response.data.token;
+                navigate('/additional-info');
             } catch {
-                // alert(response.data.message);
+                console.log(response.data.message);
             }
         }
+
     }
 
 
