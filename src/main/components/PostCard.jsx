@@ -2,12 +2,12 @@ import '../styles/PostCard.css';
 import testAv from '../static-tests/test-av.png';
 import {Avatar} from "./Avatar";
 import {PostReactionsBlock} from "./PostReactionsBlock";
-import landcape from '../static-tests/landscape.png'
 import {CommentCard} from "./CommentCard";
 
 /**
  * @description Компонент карточки поста
  * @param props.text текст поста
+ * @param props.media прикрепленное изображение / null
  * @returns {JSX.Element}
  * @constructor
  */
@@ -42,7 +42,7 @@ export function PostCard(props) {
 
             <div className="post-card-media">
                 <div className="post-media">
-                    <img src={landcape}/>
+                    <img src={props.media}/>
                 </div>
             </div>
 

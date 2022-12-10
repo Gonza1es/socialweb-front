@@ -9,7 +9,9 @@ import {ProfileEditButton} from "./ProfileEditButton";
 export function ProfileEditor() {
     return (
         <div className="profile-editor-modal">
+
             <div className="profile-editor">
+
                 <form className="profile-editor-form">
                     <h2>Редактирование информации о пользователе</h2>
                     <span>Псевдоним</span>
@@ -21,9 +23,14 @@ export function ProfileEditor() {
                     <span>Обложка профиля</span>
                     <input type="file" accept="image/*"/>
                 </form>
+
                 <div className="profile-editor-button-wrapper">
-                    <ProfileEditButton/>
+                    <button className="edit-button">
+                        <span className="button-text">Редактировать</span>
+                    </button>
+                    {/*<ProfileEditButton/>*/}
                 </div>
+
             </div>
         </div>
     )

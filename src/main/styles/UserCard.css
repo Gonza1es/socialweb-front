@@ -1,0 +1,61 @@
+.user-card {
+    display: flex;
+    margin: 20px 0;
+    border: 2px solid rgba(70, 76, 84, 1);
+    border-radius: 15px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.user-card .user-name {
+    display: flex;
+    flex: 0.5;
+    color: #464C54;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.user-card .user-button-block {
+    display: flex;
+    flex: 0.45;
+    margin-right: 10px;
+}
+
+.user-card button {
+    display: flex;
+    flex: 0.45;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.user-card button span {
+    margin: 7px auto;
+}
+
+.user-card .go-to-profile {
+    background-color: #BFCC58;
+    color: #464C54;
+    margin-right: auto;
+}
+
+.user-card .ban-user {
+    background-color: #CA2828;
+    color: #FFFFFF;
+
+}
+
+.user-card .avatar {
+    --size: 80px;
+}
+
+.user-card .avatar .badge {
+    width: 11px;
+    height: 11px;
+    right: 12px;
+    bottom: 10px;
+}
