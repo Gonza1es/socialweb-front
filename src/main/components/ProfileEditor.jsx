@@ -1,5 +1,4 @@
 import '../styles/ProfileEditor.css';
-import {ProfileEditButton} from "./ProfileEditButton";
 
 /**
  * @description Модальное окно редактирования данных о пользователе
@@ -28,7 +27,6 @@ export function ProfileEditor() {
                     <button className="edit-button">
                         <span className="button-text">Редактировать</span>
                     </button>
-                    {/*<ProfileEditButton/>*/}
                 </div>
 
             </div>

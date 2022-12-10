@@ -1,7 +1,6 @@
 import '../styles/PostReactionsBlock.css';
 import likeLogo from '../likeLogo.svg';
 import commentLogo from '../commentLogo.svg';
-import {useState} from "react";
 
 /**
  * @description Компонент с кнопками реакций на пост

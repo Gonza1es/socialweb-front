@@ -1,6 +1,4 @@
 import '../styles/ModeratorPanelReportCard.css';
-import {Avatar} from './Avatar';
-import testAv from '../static-tests/test-av.png';
 import {PostCard} from "./PostCard";
 
 export function ModeratorPanelReportCard() {

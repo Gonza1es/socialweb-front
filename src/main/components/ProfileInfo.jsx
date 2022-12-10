@@ -1,7 +1,6 @@
 import '../styles/ProfileInfo.css'
 import testAv from '../static-tests/test-av.png'
 import {Avatar} from "./Avatar";
-import {SubscribeButton} from "./SubscribeButton";
 import {ProfileEditButton} from "./ProfileEditButton";
 import {ProfileEditor} from "./ProfileEditor";
 
@@ -63,8 +62,4 @@ export function ProfileInfo(props) {
             </div>
         </div>
     )
-}
-
-function test() {
-    alert('TEST!');
 }
