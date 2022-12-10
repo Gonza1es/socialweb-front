@@ -1,5 +1,4 @@
 import '../styles/Avatar.css'
-import {useState} from "react";
 
 /**
  * @description Компонент аватарки

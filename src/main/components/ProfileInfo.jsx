@@ -1,7 +1,6 @@
 import '../styles/ProfileInfo.css'
 import testAv from '../static-tests/test-av.png'
 import {Avatar} from "./Avatar";
-import {SubscribeButton} from "./SubscribeButton";
 import {ProfileEditButton} from "./ProfileEditButton";
 import {ProfileEditor} from "./ProfileEditor";
 
@@ -12,16 +11,6 @@ import {ProfileEditor} from "./ProfileEditor";
  * @constructor
  */
 export function ProfileInfo(props) {
-
-    function popUpModal() {
-        const editorWindow = document.getElementsByClassName('profile-editor-modal')[0];
-        window.onclick = (event) => {
-            if (event.target == editorWindow) {
-                editorWindow.style.display = 'none';
-            }
-        };
-        editorWindow.style.display = 'flex';
-    }
 
     return (
         <div className="profile-info-wrapper">
@@ -64,7 +53,6 @@ export function ProfileInfo(props) {
 
 
                 <div className="profile-action-button">
-                    {/*<SubscribeButton/>*/}
                     <ProfileEditButton/>
                 </div>
 
@@ -74,8 +62,4 @@ export function ProfileInfo(props) {
             </div>
         </div>
     )
-}
-
-function test() {
-    alert('TEST!');
 }

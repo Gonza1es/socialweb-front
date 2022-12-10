@@ -3,7 +3,7 @@ import testAv from '../static-tests/test-av.png'
 import {Avatar} from "./Avatar";
 
 
-export function UserCard() {
+export function ModeratorPanelUserCard() {
     return (
         <div className="user-card">
             <Avatar img={testAv} online={true}/>

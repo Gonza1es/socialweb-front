@@ -43,11 +43,18 @@
 /*}*/
 
 
+
 .post-creator-photo-button {
     border: none;
     background-color: transparent;
+    text-align: center;
     margin: auto;
 }
+
+.post-creator-photo-button .attachment {
+    display: none;
+}
+
 
 .post-creator-publish-button {
     border: none;

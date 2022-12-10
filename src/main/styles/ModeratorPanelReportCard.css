@@ -1,0 +1,78 @@
+.report-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #464C54;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+
+
+.report-card-wrapper .avatar {
+    --size: 80px;
+}
+
+.report-card-wrapper .avatar .badge {
+    width: 11px;
+    height: 11px;
+    right: 10px;
+    bottom: 11px;
+}
+
+.report-card-wrapper .post-card-wrapper {
+    width: 100%;
+}
+
+.report-card-wrapper .post-card-reactions {
+    display: none;
+}
+
+.report-card-wrapper .post-card-comments {
+    display: none;
+}
+
+.report-card-header {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #464C54;
+    left: 90px;
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.report-card-button-block {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    width: 85%;
+}
+
+.report-card-wrapper button {
+    border: 2px solid #464C54;
+    border-radius: 15px;
+    margin: 0 20px 20px 0;
+    flex-basis: 25%;
+}
+
+.report-card-button-block button span {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    margin: auto;
+}
+
+.report-card-wrapper .decline-button {
+    background-color: #BFCC58;
+    color: #464C54;
+}
+
+.report-card-wrapper .delete-post-button {
+    background-color: #FF4B4B;
+    color: #FFFFFF;
+}
+
+.report-card-wrapper .ban-user-button {
+    background-color: #CA2828;
+    color: #FFFFFF;
+}
