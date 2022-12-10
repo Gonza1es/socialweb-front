@@ -96,3 +96,24 @@
 .post-card-comments {
     display: flex;
 }
+
+@media only screen and (max-width: 1600px) {
+
+    .post-owner-name {
+        font-size: 19px;
+
+    }
+
+    .post-meta-delimiter {
+        font-size: 19px;
+    }
+
+    .post-date {
+        font-size: 14px;
+    }
+
+    .post-text span {
+        font-size: 16px;
+    }
+
+}

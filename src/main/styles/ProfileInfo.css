@@ -25,13 +25,10 @@
 }
 
 .profile-images-group .profile-cover {
-    /*object-fit: cover;*/
-    /*object-position: center;*/
     height: 200px;
     position: relative;
     top: 0;
     left: 0;
-    background-image: url("../static-tests/test-av.png");
     background-size: cover;
 
 }
@@ -105,3 +102,27 @@
     margin: auto;
 }
 
+@media only screen and (max-width: 1600px) {
+
+    .profile-images-group .profile-cover {
+        height: 150px;
+    }
+
+    .profile-name {
+        font-size: 19px;
+    }
+
+    .profile-status {
+        font-size: 16px;
+    }
+
+    .subscribers .label, .subscribers .count {
+        font-size: 19px;
+    }
+
+    .profile-action-button .button-text {
+        font-size: 19px;
+    }
+
+
+}

@@ -58,3 +58,16 @@
     right: 12px;
     bottom: 10px;
 }
+
+@media only screen and (max-width: 1600px) {
+
+    .subscription-card .subscription-name {
+        font-size: 19px;
+    }
+
+    .subscription-card button span {
+        font-size: 16px;
+        margin: 3px auto;
+    }
+
+}
