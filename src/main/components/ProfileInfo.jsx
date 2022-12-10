@@ -13,16 +13,6 @@ import {ProfileEditor} from "./ProfileEditor";
  */
 export function ProfileInfo(props) {
 
-    function popUpModal() {
-        const editorWindow = document.getElementsByClassName('profile-editor-modal')[0];
-        window.onclick = (event) => {
-            if (event.target == editorWindow) {
-                editorWindow.style.display = 'none';
-            }
-        };
-        editorWindow.style.display = 'flex';
-    }
-
     return (
         <div className="profile-info-wrapper">
 
@@ -64,7 +54,6 @@ export function ProfileInfo(props) {
 
 
                 <div className="profile-action-button">
-                    {/*<SubscribeButton/>*/}
                     <ProfileEditButton/>
                 </div>
 

@@ -9,6 +9,7 @@ import photoLogo from '../photoLogo.svg'
  * @constructor
  */
 export function PostCreator() {
+
     return (
         <div className="post-creator-wrapper">
 
@@ -21,9 +22,13 @@ export function PostCreator() {
                     <textarea placeholder="Новая запись..."></textarea>
                 </div>
 
-                <button className="post-creator-photo-button">
-                    <img src={photoLogo}/>
-                </button>
+                <form className="post-creator-photo-button">
+                    <label for="attachment-upload">
+                        <img src={photoLogo}/>
+                    </label>
+                    <input id="attachment-upload" className="attachment" type="file" accept="image/*"/>
+                    {/*<input type="file"><img src={photoLogo}/></input>*/}
+                </form>
 
                 <button className="post-creator-publish-button" onClick={test}>
                     <span>Опубликовать</span>
