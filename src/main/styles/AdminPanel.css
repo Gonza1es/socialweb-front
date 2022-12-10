@@ -1,0 +1,60 @@
+.Admin-Panel {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-panel-header {
+    display: flex;
+    width: 90%;
+}
+
+.admin-panel-header .content-delimiter-wrapper {
+    width: 100%;
+}
+
+.admin-panel-header span {
+    align-self: center;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 72px;
+
+}
+
+.admin-panel-button-group {
+    width: 90%;
+    display: flex;
+    margin: 0 0 40px 0;
+}
+
+.admin-panel-button-group button {
+    display: flex;
+    flex: 0.2;
+    border: 2px solid #464C54;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    margin: auto 15px;
+}
+
+.admin-panel-button-group span {
+    margin: 5px auto;
+}
+
+.admin-panel-button-group .reports {
+    background-color: transparent;
+    color: black;
+}
+
+.admin-panel-button-group .users {
+    background-color: #BFCC58;
+    color: #464C54;
+}
+
+.Admin-Panel .cards-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
