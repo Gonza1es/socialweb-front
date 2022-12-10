@@ -1,10 +1,10 @@
-import {useState} from "react";
+
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 export function Form() {
     const urlAuth = 'http://localhost:8081/api/auth/';
-    const urlContent = 'http://localhost:8081/api/content/';
     const [headerText, setHeaderText] = useState('Вход');
     const [buttonText, setButtonText] = useState('Войти');
     const [loginState, setLoginState] = useState(true);
@@ -24,43 +24,31 @@ export function Form() {
         password: ''
     }
 
-    const testIsFirstTime = false;
     const navigate = useNavigate();
 
     const submitHandler = async (event) => {
         event.preventDefault();
-        let response
         if (loginState) {
             loginRequest.username = loginValue;
             loginRequest.password = passwordValue;
-            try {
-                response = await axios.post(urlAuth + 'login', loginRequest);
-                   const authAttribute = await axios.get(urlContent, {
-                        headers: {
-                            Authorization: 'Bearer '+ response.data.token
-                        }
-                    }, response);
-                   console.log(authAttribute.data);
-                   if (testIsFirstTime) {
-                       navigate('/additional-info');
-                   } else {
-                       navigate('/my-profile');
-                   }
-                   document.cookie = "SessionId=" + response.data.token;
-            } catch {
-                console.log(response.data.message);
+
+            const response = await axios.post(urlAuth + 'login', loginRequest);
+            if (response.data.code !== '1') {
+                document.cookie = response.data.message;
+                navigate('/my-profile');
+            } else {
+                setErrorValue(response.data.message)
             }
         } else {
             regRequest.username = loginValue;
             regRequest.email = emailValue;
             regRequest.password = passwordValue;
-            try {
-                response = axios.post(urlAuth + 'registration', regRequest);
-                console.log(response.data.message);
-                document.cookie = "SessionId=" + response.data.token;
-                navigate('/additional-info');
-            } catch {
-                console.log(response.data.message);
+
+            const responseReg = await axios.post(urlAuth + 'registration', regRequest);
+            if (responseReg.data.code === '2' || responseReg.data.code === '3') {
+                setErrorValue(responseReg.data.message)
+            } else {
+                setLoginState(true)
             }
         }
 
@@ -106,15 +94,14 @@ export function Form() {
                 </ul>
             </form>
 
+            <h4 style={
+                {color: "red" }
+            }>
+                {errorValue}</h4>
             <ul>
                 <li><button id="login-register" onClick={submitHandler}>{buttonText}</button></li>
                 <li><button hidden={!loginState} id="forgot-password"><span>Забыли пароль?</span></button></li>
             </ul>
-            <h2>{errorValue}</h2>
         </div>
     )
-}
-
-function testFunc() {
-    alert('test');
 }

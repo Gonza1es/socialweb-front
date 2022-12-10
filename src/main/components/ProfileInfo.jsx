@@ -1,16 +1,30 @@
 import '../styles/ProfileInfo.css'
 import testAv from '../static-tests/test-av.png'
 import {Avatar} from "./Avatar";
+import {SubscribeButton} from "./SubscribeButton";
 import {ProfileEditButton} from "./ProfileEditButton";
 import {ProfileEditor} from "./ProfileEditor";
 
 /**
  * @description Компонент с главной информацией о профиле
- * @param props.coverImage изображение обложки профиля
+ * @param props информация профиля
  * @returns {JSX.Element}
  * @constructor
  */
-export function ProfileInfo(props) {
+
+export function ProfileInfo({profile}) {
+
+    const coverUrl = 'http://localhost:8081/image/cover/'
+
+    function popUpModal() {
+        const editorWindow = document.getElementsByClassName('profile-editor-modal')[0];
+        window.onclick = (event) => {
+            if (event.target === editorWindow) {
+                editorWindow.style.display = 'none';
+            }
+        };
+        editorWindow.style.display = 'flex';
+    }
 
     return (
         <div className="profile-info-wrapper">
@@ -19,13 +33,13 @@ export function ProfileInfo(props) {
 
                 <div className="profile-cover"
                      style={
-                        {backgroundImage: `url(${props.coverImage})`}
+                        {backgroundImage: `url(${coverUrl+ profile.coverId})`}
                      }
                 >
                 </div>
 
                 <div className="profile-avatar">
-                    <Avatar img={testAv} online={false}/>
+                    <Avatar img={profile.avatarId} online={false}/>
                 </div>
 
             </div>
@@ -37,29 +51,33 @@ export function ProfileInfo(props) {
                 <div className="profile-name-wrapper">
 
                     <div className="profile-name">
-                        <span>@Максим Гнездилов</span>
+                        <span>{profile.aliasProfile}</span>
                     </div>
 
                     <div className="profile-status">
-                        <span>I'm Rich. I'm Rich. I'm Rich.</span>
+                        <span>{profile.status}</span>
                     </div>
 
                 </div>
 
                 <div className="subscribers">
                     <span className="label">Подписчики</span>
-                    <span className="count">120</span>
+                    <span className="count">{profile.subscribersCount}</span>
                 </div>
 
 
                 <div className="profile-action-button">
+                    {/*<SubscribeButton/>*/}
                     <ProfileEditButton/>
                 </div>
-
 
                 <ProfileEditor/>
 
             </div>
         </div>
     )
+}
+
+function test() {
+    alert('TEST!');
 }

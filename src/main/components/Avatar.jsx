@@ -2,11 +2,13 @@ import '../styles/Avatar.css'
 
 /**
  * @description Компонент аватарки
- * @param props.img картинка аватарки
+ * @param props.avatarId картинка аватарки
  * @param {boolean} props.online в сети ли пользователь
  * @returns {JSX.Element}
  */
 export function Avatar(props) {
+
+    const imageUrl = 'http://localhost:8081/image/avatar/'
 
     return (
         <div className="avatar">
@@ -19,7 +21,7 @@ export function Avatar(props) {
                     <image x="0" y="0" height="100%"
                            preserveAspectRatio="xMidYMid slice"
                            width="100%"
-                           xlinkHref={props.img}>
+                           xlinkHref={imageUrl + props.img}>
                     </image>
                 </g>
             </svg>

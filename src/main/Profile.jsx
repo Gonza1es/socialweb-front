@@ -6,6 +6,8 @@ import {PostCard} from "./components/PostCard";
 import testCover from './static-tests/test-cov.png'
 import {ContentDelimiter} from "./components/ContentDelimiter";
 import {Header} from "./components/Header";
+import axios from "axios";
+import {useEffect, useState} from "react";
 
 /**
  * @description Компонент профиля
@@ -14,11 +16,41 @@ import {Header} from "./components/Header";
  */
 export function Profile() {
 
-    const posts = Array(10).fill("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies. In nisl nisi scelerisque eu ultrices. Consequat nisl vel pretium lectus quam id leo in.Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Interdum velit euismod in pellentesque massa. Pulvinar sapien et ligula ullamcorper malesuada proin.");
+    const profileUrl = 'http://localhost:8081/api/profile/current'
+    const [posts, setPosts] = useState([])
+    const [profile, setProfile] = useState({
+        aliasProfile: '',
+        status: '',
+        avatarId: 0,
+        coverId: 0,
+        subscribersCount: 0
+    })
+
+
+    async function fetchProfileInfo() {
+        const response = await axios.get(profileUrl, {
+            headers: {
+                Authorization: 'Bearer_' + document.cookie
+            }
+        });
+        profile.aliasProfile = response.data.aliasProfile;
+        profile.status = response.data.status;
+        profile.avatarId = response.data.avatarId;
+        profile.coverId = response.data.coverId;
+        profile.subscribersCount = response.data.subscribersCount;
+        setProfile(profile)
+        console.log(profile)
+        setPosts(response.data.posts);
+    }
+
+    useEffect(() => {
+        fetchProfileInfo()
+    },[])
+
     return (
         <div className="Profile">
             <Header/>
-            <ProfileInfo coverImage={testCover}/>
+            <ProfileInfo profile={profile}/>
             <PostCreator/>
             <ContentDelimiter text={"Мои записи"}/>
             {posts.map(item => <PostCard text={item} media={testImg}/>)}
