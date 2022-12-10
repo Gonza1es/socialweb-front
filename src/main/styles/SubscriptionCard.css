@@ -1,0 +1,60 @@
+.subscription-card {
+    display: flex;
+    margin: 20px 0;
+    border: 2px solid rgba(70, 76, 84, 1);
+    border-radius: 15px;
+    width: 75%;
+    align-items: center;
+}
+
+.subscription-card .subscription-name {
+    display: flex;
+    flex: 0.65;
+    color: #464C54;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.subscription-card .button-block {
+    display: flex;
+    flex: 0.3;
+    margin-right: 10px;
+}
+
+.subscription-card button {
+    display: flex;
+    flex: 0.45;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.subscription-card button span {
+    margin: 7px auto;
+}
+
+.subscription-card .send-msg {
+    background-color: #BFCC58;
+    color: #464C54;
+    margin-right: auto;
+}
+
+.subscription-card .unsubscribe {
+    background-color: #595F29;
+    color: #FFFFFF;
+
+}
+
+.subscription-card .avatar {
+    --size: 80px;
+}
+
+.subscription-card .avatar .badge {
+    width: 11px;
+    height: 11px;
+    right: 12px;
+    bottom: 10px;
+}

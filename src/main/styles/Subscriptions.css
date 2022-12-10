@@ -1,0 +1,19 @@
+.Subscriptions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscriptions-count {
+    width: 75%;
+}
+
+.subscriptions-count span {
+    font-family: Inter sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: rgba(70, 76, 84, 1);
+}
+

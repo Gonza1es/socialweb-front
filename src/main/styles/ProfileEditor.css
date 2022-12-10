@@ -70,3 +70,25 @@
     display: flex;
     margin: 5% 10%;
 }
+
+
+.profile-editor-button-wrapper .edit-button-wrapper {
+    display: flex;
+}
+
+.profile-editor-button-wrapper .edit-button {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    font-weight: 600;
+    color: #464C54;
+    background-color: #BFCC58;
+    border-radius: 15px;
+    border: none;
+}
+
+.profile-editor-button-wrapper .edit-button .button-text {
+    display: flex;
+    align-self: center;
+    margin: 10px;
+}

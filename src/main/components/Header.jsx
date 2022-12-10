@@ -28,7 +28,7 @@ export function Header() {
         fontWeight: "600",
         lineHeight: "25px",
         textDecorationLine: "underline",
-        textUnderlineOffset: "5px"
+        textUnderlineOffset: "7px"
     };
 
     return (
@@ -68,7 +68,7 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
-                        to="/subscribes"
+                        to="/subscriptions"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle
                         }
