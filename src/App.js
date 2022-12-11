@@ -7,15 +7,16 @@ import {FirstTimeLogin} from "./main/FirstTimeLogin";
 import {Subscriptions} from "./main/ Subscriptions";
 import {ModeratorPanel} from "./main/ModeratorPanel";
 import {AdminPanel} from "./main/AdminPanel";
+import {UserProfile} from "./main/UserProfile";
 
 function App() {
     return (
         <div className="App">
             <Routes>
                 <Route path="auth" element={<Auth/>}/>
-                <Route path="/" element={<Profile/>}/>
                 <Route index element={<Profile/>}/>
                 <Route path="my-profile" element={<Profile/>}/>
+                <Route path="user/:name" element={<UserProfile/>}/>
                 <Route path="feed" element={<Feed/>}/>
                 <Route path="subscriptions" element={<Subscriptions/>}/>
                 <Route path="additional-info" element={<FirstTimeLogin/>}/>

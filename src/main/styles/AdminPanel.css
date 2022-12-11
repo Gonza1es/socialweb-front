@@ -58,3 +58,17 @@
     flex-direction: column;
     width: 90%;
 }
+
+@media only screen and (max-width: 1600px) {
+
+    .admin-panel-header span {
+        font-size: 35px;
+    }
+
+
+
+    .admin-panel-button-group button span {
+        font-size: 15px;
+    }
+
+}

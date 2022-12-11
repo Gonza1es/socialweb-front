@@ -50,7 +50,7 @@ export function Profile() {
     return (
         <div className="Profile">
             <Header/>
-            <ProfileInfo profile={profile}/>
+            <ProfileInfo profile={profile} selfProfile={true}/>
             <PostCreator/>
             <ContentDelimiter text={"Мои записи"}/>
             {posts.map(item => <PostCard text={item} media={testImg}/>)}

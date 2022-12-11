@@ -64,3 +64,11 @@
     right: 12px;
     bottom: 10px;
 }
+
+@media only screen and (max-width: 1600px) {
+
+    .user-card button span {
+        font-size: 15px;
+    }
+
+}
