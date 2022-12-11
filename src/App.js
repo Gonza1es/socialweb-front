@@ -12,9 +12,9 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path="auth" element={<Auth/>}/>
-                <Route path="/" element={<Profile/>}/>
-                <Route index element={<Profile/>}/>
+                <Route path="/" element={<Auth/>}/>
+                {/*<Route path="/" element={<Profile/>}/>*/}
+                {/*<Route index element={<Profile/>}/>*/}
                 <Route path="my-profile" element={<Profile/>}/>
                 <Route path="feed" element={<Feed/>}/>
                 <Route path="subscriptions" element={<Subscriptions/>}/>

@@ -17,6 +17,7 @@ import {useEffect, useState} from "react";
 export function Profile() {
 
     const profileUrl = 'http://localhost:8081/api/profile/current'
+    const postUrl = 'http://localhost:8081/api/post/current'
     const [posts, setPosts] = useState([])
     const [profile, setProfile] = useState({
         aliasProfile: '',
@@ -39,8 +40,12 @@ export function Profile() {
         profile.coverId = response.data.coverId;
         profile.subscribersCount = response.data.subscribersCount;
         setProfile(profile)
-        console.log(profile)
-        setPosts(response.data.posts);
+        const postsResponse = await axios.get(postUrl, {
+            headers: {
+                Authorization: 'Bearer_' + document.cookie
+            }
+        })
+        setPosts(postsResponse.data)
     }
 
     useEffect(() => {
@@ -53,7 +58,7 @@ export function Profile() {
             <ProfileInfo profile={profile}/>
             <PostCreator/>
             <ContentDelimiter text={"Мои записи"}/>
-            {posts.map(item => <PostCard text={item} media={testImg}/>)}
+            {posts.map(item => <PostCard post={item}/>)}
         </div>
     )
 }

@@ -7,20 +7,20 @@ import commentLogo from '../commentLogo.svg';
  * @returns {JSX.Element}
  * @constructor
  */
-export function PostReactionsBlock() {
+export function PostReactionsBlock({like, comment}) {
     return (
         <div className="post-reaction-block-wrapper">
             <div className="like-button-wrapper">
                 <button className="like-button">
                     <img src={likeLogo}/>
-                    <span>15</span>
+                    <span>{like}</span>
                 </button>
             </div>
 
             <div className="comment-button-wrapper">
                 <button className="comment-button">
                     <img src={commentLogo}></img>
-                    <span>3</span>
+                    <span>{comment}</span>
                 </button>
             </div>
 
