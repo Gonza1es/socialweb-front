@@ -37,13 +37,6 @@
     line-height: 30px;
 }
 
-/*.post-creator-input textarea::placeholder {*/
-/*    !*margin-top: auto;*!*/
-/*    margin: auto;*/
-/*}*/
-
-
-
 .post-creator-photo-button {
     border: none;
     background-color: transparent;
@@ -85,4 +78,24 @@
 
 .post-creator-wrapper .avatar .badge {
     display: none;
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .post-creator-input textarea {
+        font-size: 19px;
+    }
+
+    .post-creator-publish-button {
+        font-size: 14px;
+    }
+
+    .attachment-image img {
+        height: 30px;
+    }
+
+    .post-creator-wrapper .avatar {
+        --size: 60px;
+    }
+
 }

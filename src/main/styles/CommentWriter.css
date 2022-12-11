@@ -1,0 +1,53 @@
+.comment-writer-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #464C54;
+    border-radius: 15px;
+}
+
+.comment-writer-wrapper .writer-miniature {
+    margin: auto 10px;
+}
+
+.comment-writer-wrapper .writer-body {
+    display: flex;
+    flex: 1;
+}
+
+.writer-body input {
+    width: 93%;
+    border-style: none;
+}
+
+.writer-body input:focus{
+    outline: none;
+}
+
+.writer-miniature .avatar {
+    --size: 60px;
+}
+
+.writer-miniature .avatar .img {
+    border: 3px solid #FFFFFF;
+}
+
+.writer-miniature .avatar .badge {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 8px;
+    bottom: 6px;
+}
+
+.comment-writer-wrapper button {
+    border-style: none;
+    background-color: #BFCC58;
+    border-radius: 15px;
+}
+
+.comment-writer-wrapper button img {
+    margin: 5px 10px;
+    height: 20px;
+}

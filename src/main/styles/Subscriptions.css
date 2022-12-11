@@ -17,3 +17,12 @@
     color: rgba(70, 76, 84, 1);
 }
 
+@media only screen and (max-width: 1600px) {
+
+    .subscriptions-count span {
+        font-size: 20px;
+    }
+
+
+
+}

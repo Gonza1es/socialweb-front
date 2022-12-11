@@ -19,7 +19,7 @@
 }
 
 .report-card-wrapper .post-card-wrapper {
-    width: 100%;
+    width: 95%;
 }
 
 .report-card-wrapper .post-card-reactions {
@@ -75,4 +75,20 @@
 .report-card-wrapper .ban-user-button {
     background-color: #CA2828;
     color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .report-card-wrapper .report-card-header {
+        font-size: 20px;
+    }
+
+    .report-card-button-block {
+        width: 50%;
+    }
+
+    .report-card-button-block button span {
+        font-size: 15px;
+    }
+
 }

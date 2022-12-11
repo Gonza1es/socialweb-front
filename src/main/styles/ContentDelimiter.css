@@ -26,3 +26,11 @@
     stroke: rgba(70, 76, 84, 0.75);
     stroke-width: 3px;
 }
+
+@media only screen and (max-width: 1600px) {
+
+    .content-delimiter-wrapper {
+        font-size: 19px;
+    }
+
+}

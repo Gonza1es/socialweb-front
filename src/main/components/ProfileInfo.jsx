@@ -12,19 +12,9 @@ import {ProfileEditor} from "./ProfileEditor";
  * @constructor
  */
 
-export function ProfileInfo({profile}) {
+export function ProfileInfo({profile, selfProfile}) {
 
     const coverUrl = 'http://localhost:8081/image/cover/'
-
-    function popUpModal() {
-        const editorWindow = document.getElementsByClassName('profile-editor-modal')[0];
-        window.onclick = (event) => {
-            if (event.target === editorWindow) {
-                editorWindow.style.display = 'none';
-            }
-        };
-        editorWindow.style.display = 'flex';
-    }
 
     return (
         <div className="profile-info-wrapper">
@@ -67,11 +57,10 @@ export function ProfileInfo({profile}) {
 
 
                 <div className="profile-action-button">
-                    {/*<SubscribeButton/>*/}
-                    <ProfileEditButton/>
+                    {selfProfile ? <ProfileEditButton/> : <SubscribeButton/>}
                 </div>
 
-                <ProfileEditor/>
+                {selfProfile ? <ProfileEditor/> : ""}
 
             </div>
         </div>

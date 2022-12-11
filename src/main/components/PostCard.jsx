@@ -3,6 +3,7 @@ import testAv from '../static-tests/test-av.png';
 import {Avatar} from "./Avatar";
 import {PostReactionsBlock} from "./PostReactionsBlock";
 import {CommentCard} from "./CommentCard";
+import {CommentWriter} from "./CommentWriter";
 
 /**
  * @description Компонент карточки поста
@@ -53,6 +54,8 @@ export function PostCard({post}) {
             <div className="post-card-comments">
                 {post.comment.map(comment => <CommentCard comment={comment}/>)}
             </div>
+
+            <CommentWriter/>
 
         </div>
     )

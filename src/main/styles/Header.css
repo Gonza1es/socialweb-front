@@ -4,7 +4,6 @@
     margin-bottom: 20px;
     position: static;
     flex-direction: row;
-    /*align-self: flex-start;*/
     width: 75%;
 }
 
@@ -32,4 +31,21 @@
     width: 50%;
     align-items: center;
     justify-content: flex-end;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .header-logo {
+        height: 45px;
+    }
+    .header-logo span {
+        font-size: 30px;
+    }
+
+    .header-navbar {
+        font-size: 14px;
+    }
 }
