@@ -13,7 +13,7 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path="auth" element={<Auth/>}/>
+                <Route path="/" element={<Auth/>}/>
                 <Route index element={<Profile/>}/>
                 <Route path="my-profile" element={<Profile/>}/>
                 <Route path="user/:name" element={<UserProfile/>}/>
