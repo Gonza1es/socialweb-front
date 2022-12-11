@@ -20,7 +20,8 @@ export function SubscribeButton({isSubscribed, name}) {
         }
     })
 
-    async function handleButtonStateChange() {
+    async function handleButtonStateChange(event) {
+        event.preventDefault();
         if (subscriptionStatus) {
             setButtonText('Подписаться')
             setSubscriptionStatus(!subscriptionStatus);

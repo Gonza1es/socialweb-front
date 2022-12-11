@@ -77,7 +77,7 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
-                        to="/logout"
+                        to="/"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle
                         }

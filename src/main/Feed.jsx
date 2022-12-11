@@ -3,6 +3,8 @@ import {PostCard} from "./components/PostCard";
 import {ContentDelimiter} from "./components/ContentDelimiter";
 import {PostCreator} from "./components/PostCreator";
 import {Header} from "./components/Header";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 
 /**
@@ -11,13 +13,28 @@ import {Header} from "./components/Header";
  * @constructor
  */
 export function Feed() {
-    const posts = Array(20).fill("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies. In nisl nisi scelerisque eu ultrices. Consequat nisl vel pretium lectus quam id leo in.Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Interdum velit euismod in pellentesque massa. Pulvinar sapien et ligula ullamcorper malesuada proin.");
+    const [posts, setPosts] = useState([])
+    const postUrl = 'http://localhost:8081/api/post/feed'
+    const avatar = localStorage.getItem('avatar');
+
+    const fetchPost = async () => {
+        const postsResponse = await axios.get(postUrl, {
+            headers: {
+                Authorization: 'Bearer_' + document.cookie
+            }
+        });
+        setPosts(postsResponse.data)
+    }
+
+    useEffect(() => {
+        fetchPost()
+    },[])
     return (
         <div className="Feed">
             <Header/>
-            <PostCreator/>
+            <PostCreator avatarId={avatar}/>
             <ContentDelimiter text={"Новости"}/>
-            {posts.map(item => <PostCard text={item}/>)}
+            {posts.map(item => <PostCard post={item}/>)}
         </div>
     )
 }

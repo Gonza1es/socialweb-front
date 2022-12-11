@@ -48,14 +48,14 @@ export function PostCard({post}) {
             </div>
 
             <div className="post-card-reactions">
-                <PostReactionsBlock likeProps={post.likes} comment={post.comment.length} postId={post.id}/>
+                <PostReactionsBlock likeProps={post.likes} comment={post.commentsCount} postId={post.id}/>
             </div>
 
             <div className="post-card-comments">
-                {post.comment.map(comment => <CommentCard comment={comment}/>)}
+                {/*{post.comment.map(comment => <CommentCard comment={comment}/>)}*/}
             </div>
 
-            <CommentWriter avatarId={post.avatarId}/>
+            <CommentWriter avatarId={post.avatarId} postId={post.id}/>
 
         </div>
     )

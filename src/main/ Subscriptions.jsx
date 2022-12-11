@@ -2,9 +2,24 @@ import './styles/Subscriptions.css';
 import {Header} from "./components/Header";
 import {ContentDelimiter} from "./components/ContentDelimiter";
 import {SubscriptionCard} from "./components/SubscriptionCard";
+import axios from "axios";
+import {useEffect, useState} from "react";
 
 export function Subscriptions() {
+    const [subscriptions, setSubscriptions] = useState([])
 
+    const fetchSubscriptions = async () => {
+        const response = await axios.get('http://localhost:8081/api/profile/subscriptions', {
+            headers: {
+                Authorization: 'Bearer_' + document.cookie
+            }
+        });
+        setSubscriptions(response.data)
+    }
+
+    useEffect(() => {
+        fetchSubscriptions()
+    })
     function getNumEnding(iNumber, aEndings) {
         let sEnding, i;
         iNumber = iNumber % 100;
@@ -28,16 +43,15 @@ export function Subscriptions() {
         return sEnding;
     }
 
-    const testCount = 1;
-    const testSubs = Array(1).fill(<SubscriptionCard/>);
+
     return (
         <div className="Subscriptions">
             <Header/>
             <ContentDelimiter text={"Мои подписки"}/>
             <div className="subscriptions-count">
-                <span>Вы подписаны на {testCount} {getNumEnding(testCount, ["человека", "человека", "человек"])}.</span>
+                <span>Вы подписаны на {subscriptions.length} {getNumEnding(subscriptions.length, ["человека", "человека", "человек"])}.</span>
             </div>
-            {testSubs.map(card => card)}
+            {subscriptions.map(card => <SubscriptionCard card={card}/>)}
         </div>
     )
 }

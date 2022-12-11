@@ -37,6 +37,7 @@ export function Profile() {
         profile.aliasProfile = response.data.aliasProfile;
         profile.status = response.data.status;
         profile.avatarId = response.data.avatarId;
+        localStorage.setItem('avatar', response.data.avatarId)
         profile.coverId = response.data.coverId;
         profile.subscribersCount = response.data.subscribersCount;
         setProfile(profile)
@@ -58,7 +59,7 @@ export function Profile() {
             <ProfileInfo profile={profile} selfProfile={true}/>
             <PostCreator avatarId={profile.avatarId}/>
             <ContentDelimiter text={"Мои записи"}/>
-            {posts.map(item => <PostCard post={item}/>)}
+            {posts.map(item => <PostCard post={item} key={item.id}/>)}
         </div>
     )
 }

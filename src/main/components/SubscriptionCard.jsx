@@ -2,21 +2,31 @@ import '../styles/SubscriptionCard.css';
 import testAv from '../static-tests/test-av.png'
 import {Avatar} from "./Avatar";
 import {Link} from "react-router-dom";
+import axios from "axios";
 
 
-export function SubscriptionCard() {
+export function SubscriptionCard({card}) {
 
-    const testUserName = "tester";
+    const unsubscribe = async (event) => {
+        event.preventDefault();
+
+        await axios.get('http://localhost:8081/api/profile/unsubscribe/'+card.username, {
+            headers: {
+                Authorization: 'Bearer_' + document.cookie
+            }
+        })
+    }
+
 
     return (
         <div className="subscription-card">
-            <Avatar img={testAv} online={true}/>
-            <Link to={`/user/${testUserName}`} className="subscription-name">@Максим Гнездилов</Link>
+            <Avatar img={card.avatarId} online={true}/>
+            <Link to={`/user/${card.username}`} className="subscription-name">{card.username}</Link>
             <div className="button-block">
                 <button className="send-msg">
                     <span>Написать</span>
                 </button>
-                <button className="unsubscribe">
+                <button className="unsubscribe" onClick={unsubscribe}>
                     <span>Отписаться</span>
                 </button>
             </div>
