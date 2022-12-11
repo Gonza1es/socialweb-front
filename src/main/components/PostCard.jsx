@@ -42,12 +42,12 @@ export function PostCard({post}) {
 
             <div className="post-card-media">
                 <div className="post-media">
-                    <img src={post.media}/>
+                    <img src={'http://localhost:8081/image/postImage/'+post.imageId}/>
                 </div>
             </div>
 
             <div className="post-card-reactions">
-                <PostReactionsBlock like={post.likes} comment={post.comment.length}/>
+                <PostReactionsBlock likeProps={post.likes} comment={post.comment.length} postId={post.id}/>
             </div>
 
             <div className="post-card-comments">
