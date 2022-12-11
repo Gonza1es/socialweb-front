@@ -55,7 +55,7 @@ export function PostCard({post}) {
                 {post.comment.map(comment => <CommentCard comment={comment}/>)}
             </div>
 
-            <CommentWriter/>
+            <CommentWriter avatarId={post.avatarId}/>
 
         </div>
     )

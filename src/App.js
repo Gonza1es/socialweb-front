@@ -14,9 +14,9 @@ function App() {
         <div className="App">
             <Routes>
                 <Route path="/" element={<Auth/>}/>
-                <Route index element={<Profile/>}/>
+                {/*<Route index element={<Profile/>}/>*/}
                 <Route path="my-profile" element={<Profile/>}/>
-                <Route path="user/:name" element={<UserProfile/>}/>
+                <Route path="user/:name" element={<UserProfile />}/>
                 <Route path="feed" element={<Feed/>}/>
                 <Route path="subscriptions" element={<Subscriptions/>}/>
                 <Route path="additional-info" element={<FirstTimeLogin/>}/>

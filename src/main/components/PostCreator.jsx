@@ -10,7 +10,7 @@ import axios from "axios";
  * @returns {JSX.Element}
  * @constructor
  */
-export function PostCreator() {
+export function PostCreator({avatarId}) {
 
     const url = 'http://localhost:8081/api/post/createPost'
 
@@ -35,7 +35,7 @@ export function PostCreator() {
         <div className="post-creator-wrapper">
 
             <div className="miniature-wrapper">
-                <Avatar img={testAv}/>
+                <Avatar img={avatarId}/>
             </div>
 
             <div className="post-creator-body">

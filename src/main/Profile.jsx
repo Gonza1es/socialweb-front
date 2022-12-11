@@ -56,7 +56,7 @@ export function Profile() {
         <div className="Profile">
             <Header/>
             <ProfileInfo profile={profile} selfProfile={true}/>
-            <PostCreator/>
+            <PostCreator avatarId={profile.avatarId}/>
             <ContentDelimiter text={"Мои записи"}/>
             {posts.map(item => <PostCard post={item}/>)}
         </div>

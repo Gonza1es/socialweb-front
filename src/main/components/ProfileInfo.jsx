@@ -12,7 +12,7 @@ import {ProfileEditor} from "./ProfileEditor";
  * @constructor
  */
 
-export function ProfileInfo({profile, selfProfile}) {
+export function ProfileInfo({profile, selfProfile, name}) {
 
     const coverUrl = 'http://localhost:8081/image/cover/'
 
@@ -57,7 +57,7 @@ export function ProfileInfo({profile, selfProfile}) {
 
 
                 <div className="profile-action-button">
-                    {selfProfile ? <ProfileEditButton/> : <SubscribeButton/>}
+                    {selfProfile ? <ProfileEditButton/> : <SubscribeButton isSubscribed={profile.isSubscribed} name={name}/>}
                 </div>
 
                 {selfProfile ? <ProfileEditor/> : ""}
