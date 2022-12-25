@@ -1,0 +1,39 @@
+.message-sender-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #464C54;
+    border-radius: 15px;
+    align-self: center;
+    width: 95%;
+    margin-bottom: 5px;
+}
+
+.message-sender-wrapper .sender-body {
+    display: flex;
+    flex: 1;
+}
+
+.sender-body input {
+    width: 93%;
+    text-indent: 10px;
+    border-style: none;
+    border-radius: 15px;
+}
+
+.sender-body input:focus{
+    outline: none;
+}
+
+
+.message-sender-wrapper button {
+    margin: 10px 0;
+    border-style: none;
+    background-color: #BFCC58;
+    border-radius: 15px;
+}
+
+.message-sender-wrapper button img {
+    margin: 5px 10px;
+    height: 20px;
+}
