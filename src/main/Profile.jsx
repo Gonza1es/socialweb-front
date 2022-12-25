@@ -8,6 +8,7 @@ import {ContentDelimiter} from "./components/ContentDelimiter";
 import {Header} from "./components/Header";
 import axios from "axios";
 import {useEffect, useState} from "react";
+import {CommentCard} from "./components/CommentCard";
 
 /**
  * @description Компонент профиля
@@ -26,7 +27,6 @@ export function Profile() {
         coverId: 0,
         subscribersCount: 0
     })
-
 
     async function fetchProfileInfo() {
         const response = await axios.get(profileUrl, {

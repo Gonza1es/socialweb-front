@@ -13,6 +13,7 @@ import {CommentWriter} from "./CommentWriter";
  * @constructor
  */
 export function PostCard({post}) {
+
     return (
         <div className="post-card-wrapper">
 

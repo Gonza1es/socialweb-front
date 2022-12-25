@@ -8,15 +8,19 @@ import {Subscriptions} from "./main/ Subscriptions";
 import {ModeratorPanel} from "./main/ModeratorPanel";
 import {AdminPanel} from "./main/AdminPanel";
 import {UserProfile} from "./main/UserProfile";
+import {ModeratorAuth} from "./auth/ModeratorAuth";
+import {AdminAuth} from "./auth/AdminAuth";
 
 function App() {
     return (
         <div className="App">
             <Routes>
                 <Route path="/" element={<Auth/>}/>
+                <Route path="/moderator-login" element={<ModeratorAuth/>}/>
+                <Route path="/admin-login" element={<AdminAuth/>}/>
                 {/*<Route index element={<Profile/>}/>*/}
                 <Route path="my-profile" element={<Profile/>}/>
-                <Route path="user/:name" element={<UserProfile />}/>
+                <Route path="user/:name" element={<UserProfile/>}/>
                 <Route path="feed" element={<Feed/>}/>
                 <Route path="subscriptions" element={<Subscriptions/>}/>
                 <Route path="additional-info" element={<FirstTimeLogin/>}/>
