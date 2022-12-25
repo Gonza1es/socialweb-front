@@ -53,10 +53,10 @@ export function PostCard({post}) {
             </div>
 
             <div className="post-card-comments">
-                {/*{post.comment.map(comment => <CommentCard comment={comment}/>)}*/}
+                {post.comments.map(comment => <CommentCard comment={comment}/>)}
             </div>
 
-            <CommentWriter avatarId={post.avatarId} postId={post.id}/>
+            <CommentWriter postId={post.id}/>
 
         </div>
     )
