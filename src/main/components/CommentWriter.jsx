@@ -7,6 +7,7 @@ import axios from "axios";
 
 export function CommentWriter({avatarId, postId}) {
     const [textValue, setTextValue] = useState('')
+    const avatar = localStorage.getItem('avatar');
 
     const request = {
         postId: 0,
@@ -27,7 +28,7 @@ export function CommentWriter({avatarId, postId}) {
     return (
         <div className="comment-writer-wrapper">
             <div className="writer-miniature">
-                <Avatar img={avatarId}/>
+                <Avatar img={avatar}/>
             </div>
             <form className="writer-body">
                 <input type="text" placeholder="Оставить комментарий..." required

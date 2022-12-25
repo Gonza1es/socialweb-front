@@ -8,25 +8,25 @@ import girlAvatar from "../static-tests/girl.png";
  * @returns {JSX.Element}
  * @constructor
  */
-export function CommentCard(props) {
+export function CommentCard({comment}) {
     return (
         <div className="comment-wrapper">
 
             <div className="comment-avatar-wrapper">
-                <Avatar img={girlAvatar}/>
+                <Avatar img={comment.avatarId}/>
             </div>
 
             <div className="comment-body">
                 <div className="comment-name">
-                    <span>@Ксения Печерских</span>
+                    <span>{comment.profileAlias}</span>
                 </div>
 
                 <div className="comment-text">
-                    <span>Господи, чем я занимаюсь, господи...</span>
+                    <span>{comment.text}</span>
                 </div>
 
                 <div className="comment-date">
-                    <span>29 ноября 2022</span>
+                    <span>{comment.creationDate}</span>
                 </div>
             </div>
 
