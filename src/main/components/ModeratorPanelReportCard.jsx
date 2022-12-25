@@ -1,25 +1,49 @@
 import '../styles/ModeratorPanelReportCard.css';
 import {PostCard} from "./PostCard";
+import {PostForReportCard} from "./PostForReportCard";
+import axios from "axios";
 
-export function ModeratorPanelReportCard() {
+export function ModeratorPanelReportCard({report}) {
 
-    const test = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et" +
-        " dolore magna aliqua. Pharetra pharetra massa massa ultricies. In nisl nisi scelerisque eu ultrices. Consequat" +
-        "nisl vel pretium lectus quam id leo in.Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Interdum velit euismod" +
-        " in pellentesque massa. Pulvinar sapien et ligula ullamcorper malesuada proin";
+    const reject = async (event) => {
+        event.preventDefault()
+        await axios.delete('http://localhost:8081/api/moder/reject/'+report.id, {
+            headers: {
+                Authorization: 'Bearer_'+document.cookie
+            }
+        })
+    }
+
+    const deletePost = async (event) => {
+        event.preventDefault()
+        await axios.delete('http://localhost:8081/api/moder/deletePost/'+report.id, {
+            headers: {
+                Authorization: 'Bearer_'+document.cookie
+            }
+        })
+    }
+
+    const deleteUser = async (event) => {
+        event.preventDefault()
+        await axios.delete('http://localhost:8081/api/moder/deleteUser/'+report.id, {
+            headers: {
+                Authorization: 'Bearer_'+document.cookie
+            }
+        })
+    }
 
     return (
         <div className="report-card-wrapper">
-            <span className="report-card-header">Жалоба от стукача :)</span>
-            <PostCard text={test}/>
+            <span className="report-card-header">Жалоба от: {report.reporterUsername}</span>
+            <PostForReportCard post={report}/>
             <div className="report-card-button-block">
-                <button className="decline-button">
+                <button className="decline-button" onClick={reject}>
                     <span>Отклонить</span>
                 </button>
-                <button className="delete-post-button">
+                <button className="delete-post-button" onClick={deletePost}>
                     <span>Удалить пост</span>
                 </button>
-                <button className="ban-user-button">
+                <button className="ban-user-button" onClick={deleteUser}>
                     <span>В бан!</span>
                 </button>
             </div>

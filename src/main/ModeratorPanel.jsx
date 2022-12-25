@@ -1,6 +1,6 @@
 import './styles/ModeratorPanel.css';
 import {ContentDelimiter} from "./components/ContentDelimiter";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {ModeratorPanelReportsList} from "./components/ModeratorPanelReportsList";
 import {ModeratorPanelUsersList} from "./components/ModeratorPanelUsersList";
 

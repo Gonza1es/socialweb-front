@@ -59,6 +59,15 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
+                        to={"/search"}
+                        style={({isActive}) =>
+                            isActive ? navLinkActiveStyle : navLinkStyle
+                    }
+                    >
+                        Поиск
+                    </NavLink>
+
+                    <NavLink
                         to="/messages"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle

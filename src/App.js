@@ -11,6 +11,7 @@ import {UserProfile} from "./main/UserProfile";
 import {ModeratorAuth} from "./auth/ModeratorAuth";
 import {AdminAuth} from "./auth/AdminAuth";
 import {Messages} from "./main/Messages";
+import {SearchUser} from "./main/components/SearchUser";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path="additional-info" element={<FirstTimeLogin/>}/>
                 <Route path="moderator-panel" element={<ModeratorPanel/>}/>
                 <Route path="admin-panel" element={<AdminPanel/>}/>
+                <Route path="search" element={<SearchUser/>}/>
             </Routes>
         </div>
     )

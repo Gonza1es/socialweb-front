@@ -21,6 +21,15 @@ export function PostReactionsBlock({likeProps, comment, postId}) {
         })
         setLike(like+1)
     }
+
+    const sendReport = async (event) => {
+        event.preventDefault();
+        await axios.get('http://localhost:8081/api/post/report/'+postId, {
+            headers: {
+                Authorization: 'Bearer_' + document.cookie
+            }
+        })
+    }
     return (
         <div className="post-reaction-block-wrapper">
             <div className="like-button-wrapper">
@@ -38,7 +47,7 @@ export function PostReactionsBlock({likeProps, comment, postId}) {
             </div>
 
             <div className="report-button-wrapper" hidden={false}>
-                <button className="report-button">
+                <button className="report-button" onClick={sendReport}>
                     <span>Пожаловаться</span>
                 </button>
             </div>
