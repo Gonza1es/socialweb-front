@@ -19,7 +19,7 @@ export function Subscriptions() {
 
     useEffect(() => {
         fetchSubscriptions()
-    })
+    },[])
     function getNumEnding(iNumber, aEndings) {
         let sEnding, i;
         iNumber = iNumber % 100;
