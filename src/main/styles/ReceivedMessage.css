@@ -1,0 +1,50 @@
+.received-message-wrapper .message-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.column {
+    flex-basis: 33.33%;
+    margin: 5px;
+}
+
+.received-message-wrapper .sent-time {
+    flex-basis: 5%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #464C54;
+}
+
+.received-message-wrapper .message-text {
+    flex-basis: 50%;
+    border: 2px solid #464C54;
+    border-radius: 15px;
+}
+
+.received-message-wrapper .message-text p {
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.received-message-wrapper .avatar-wrapper {
+    flex-basis: 5%;
+}
+
+.received-message-wrapper .avatar {
+    --size: 56px;
+}
+
+.received-message-wrapper .avatar .img {
+    border: 3px solid #FFFFFF;
+}
+
+.received-message-wrapper .avatar .badge {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 8px;
+    bottom: 6px;
+}

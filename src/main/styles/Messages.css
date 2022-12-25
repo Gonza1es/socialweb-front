@@ -1,0 +1,17 @@
+.Messages {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Messages .components-wrapper {
+    display: flex;
+    width: 75%;
+    min-height: 0;
+    height: 100%;
+    flex-direction: row;
+}
+
+

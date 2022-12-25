@@ -1,0 +1,62 @@
+.sent-message-wrapper .message-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sent-message-wrapper .column {
+    flex-basis: 33.33%;
+    margin: 5px;
+}
+
+.sent-message-wrapper .sent-time {
+    flex-basis: 5%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #464C54;
+}
+
+.sent-message-wrapper .message-text {
+    flex-basis: 50%;
+    border: 2px solid #464C54;
+    border-radius: 15px;
+}
+
+.sent-message-wrapper .message-text p {
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sent-message-wrapper .avatar-wrapper {
+    flex-basis: 5%;
+}
+
+.sent-message-wrapper .avatar {
+    --size: 56px;
+}
+
+.sent-message-wrapper .avatar .img {
+    border: 3px solid #FFFFFF;
+}
+
+.sent-message-wrapper .avatar .badge {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 8px;
+    bottom: 6px;
+}
+
+/*@media only screen and (max-width: 1600px) {*/
+
+/*    !*.receiver-name, .last-message {*!*/
+/*    !*    font-size: 16px;*!*/
+/*    !*}*!*/
+
+/*    !*.sent-received-time {*!*/
+/*    !*    font-size: 14px;*!*/
+/*    !*}*!*/
+
+/*}*/

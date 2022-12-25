@@ -1,0 +1,77 @@
+.dialog-history-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex:1;
+}
+
+.dialog-history-card-wrapper .avatar-wrapper {
+    display: flex;
+    flex: 0.05;
+}
+
+.dialog-history-card-wrapper .card-body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    flex: 0.85;
+}
+
+.dialog-history-card-wrapper .card-body .card-meta {
+    display: flex;
+}
+
+
+.receiver-name, .last-message, .sent-received-time {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.receiver-name {
+    margin-right: auto;
+}
+
+.last-message {
+    font-size: 15px;
+    color: rgba(70, 76, 84, 0.85);
+    margin: 3px 0;
+}
+
+.sent-received-time {
+    align-self: flex-end;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(70, 76, 84, 0.75);
+}
+
+.dialog-history-card-wrapper .avatar {
+    --size: 56px;
+}
+
+.dialog-history-card-wrapper .avatar .img {
+    border: 3px solid #FFFFFF;
+}
+
+.dialog-history-card-wrapper .avatar .badge {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 8px;
+    bottom: 6px;
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .receiver-name, .last-message {
+        font-size: 16px;
+    }
+
+    .sent-received-time {
+        font-size: 14px;
+    }
+
+}
