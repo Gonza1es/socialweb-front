@@ -4,6 +4,7 @@ import {Avatar} from "./Avatar";
 import {SubscribeButton} from "./SubscribeButton";
 import {ProfileEditButton} from "./ProfileEditButton";
 import {ProfileEditor} from "./ProfileEditor";
+import {WriteMessageButton} from "./WriteMessageButton";
 
 /**
  * @description Компонент с главной информацией о профиле
@@ -29,7 +30,7 @@ export function ProfileInfo({profile, selfProfile, name}) {
                 </div>
 
                 <div className="profile-avatar">
-                    <Avatar img={profile.avatarId} online={false}/>
+                    <Avatar className={"big-av"} img={profile.avatarId} online={false}/>
                 </div>
 
             </div>
@@ -41,23 +42,30 @@ export function ProfileInfo({profile, selfProfile, name}) {
                 <div className="profile-name-wrapper">
 
                     <div className="profile-name">
-                        <span>{profile.aliasProfile}</span>
+                        <span className="big-name">{profile.aliasProfile}</span>
                     </div>
 
                     <div className="profile-status">
-                        <span>{profile.status}</span>
+                        <span className="h2">{profile.status}</span>
                     </div>
 
                 </div>
 
                 <div className="subscribers">
-                    <span className="label">Подписчики</span>
-                    <span className="count">{profile.subscribersCount}</span>
+                    <span className="label h2">Подписчики</span>
+                    <span className="count h2">{profile.subscribersCount}</span>
                 </div>
 
 
                 <div className="profile-action-button">
-                    {selfProfile ? <ProfileEditButton/> : <SubscribeButton isSubscribed={profile.isSubscribed} name={name}/>}
+                    {
+                        selfProfile ? <ProfileEditButton/>
+                            :
+                            <div className="profile-buttons-group">
+                                <SubscribeButton isSubscribed={profile.isSubscribed} name={name}/>
+                                <WriteMessageButton/>
+                            </div>
+                    }
                 </div>
 
                 {selfProfile ? <ProfileEditor/> : ""}
@@ -65,8 +73,4 @@ export function ProfileInfo({profile, selfProfile, name}) {
             </div>
         </div>
     )
-}
-
-function test() {
-    alert('TEST!');
 }

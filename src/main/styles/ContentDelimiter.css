@@ -5,7 +5,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: left;
-    font-size: 25px;
+    /*font-size: 25px;*/
     color: #464C54;
     font-weight: 600;
     line-height: 30px;
@@ -25,12 +25,4 @@
 .delimiter-line {
     stroke: rgba(70, 76, 84, 0.75);
     stroke-width: 3px;
-}
-
-@media only screen and (max-width: 1600px) {
-
-    .content-delimiter-wrapper {
-        font-size: 19px;
-    }
-
 }

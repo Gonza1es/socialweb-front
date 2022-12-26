@@ -27,14 +27,14 @@ export function ModeratorPanel() {
                         onClick={() => setModeratorPanelState('reports')}
                         style={moderatorPanelState === 'reports'? activeButtonStyle : defaultButtonStyle}
                 >
-                    <span>Жалобы</span>
+                    <span className="h2">Жалобы</span>
                 </button>
 
                 <button className="users"
                         onClick={() => setModeratorPanelState('users')}
                         style={moderatorPanelState === 'users'? activeButtonStyle : defaultButtonStyle}
                 >
-                    <span>Пользователи</span>
+                    <span className="h2">Пользователи</span>
                 </button>
             </div>
 

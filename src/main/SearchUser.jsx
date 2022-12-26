@@ -1,6 +1,7 @@
-import {Header} from "./Header";
-import {Search} from "./Search";
-import {ContentDelimiter} from "./ContentDelimiter";
+import {Header} from "./components/Header";
+import {Search} from "./components/Search";
+import {ContentDelimiter} from "./components/ContentDelimiter";
+import './styles/SearchUser.css'
 
 export function SearchUser() {
     return(

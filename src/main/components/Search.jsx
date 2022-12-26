@@ -1,6 +1,8 @@
 import {Avatar} from "./Avatar";
 import photoLogo from "../photoLogo.svg";
 import {useState} from "react";
+import '../styles/PostCreator.css'
+import '../styles/Search.css'
 
 export function Search() {
     const [text, setText] = useState('')
@@ -20,8 +22,8 @@ export function Search() {
                     ></textarea>
                 </div>
 
-                <button className="post-creator-publish-button">
-                    <span>Найти</span>
+                <button className="search-button">
+                    <span className="button-text">Найти</span>
                 </button>
             </div>
         </div>

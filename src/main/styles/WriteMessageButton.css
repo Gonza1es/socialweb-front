@@ -1,10 +1,11 @@
-.edit-button-wrapper {
+.write-msg-btn-wrapper {
     display: flex;
 }
 
-.edit-button {
+.write-msg-button {
     display: flex;
     flex-direction: row;
+    margin-left: 10px;
     font-weight: 600;
     color: #464C54;
     background-color: #BFCC58;
@@ -12,8 +13,9 @@
     border: none;
 }
 
-.edit-button .button-text {
+.write-msg-button .button-img {
     display: flex;
     align-self: center;
     margin: 10px;
 }
+

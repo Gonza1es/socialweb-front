@@ -22,8 +22,6 @@
     margin-left: 10px;
     align-self: center;
     font-weight: bolder;
-    line-height: 60px;
-    font-size: 55px;
     color: #BFCC58;
 }
 
@@ -31,21 +29,15 @@
     width: 50%;
     align-items: center;
     justify-content: flex-end;
-    font-size: 21px;
+    /*font-size: 21px;*/
     font-weight: 600;
-    line-height: 25px;
+    /*line-height: 25px;*/
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1920px) {
 
     .header-logo {
         height: 45px;
     }
-    .header-logo span {
-        font-size: 30px;
-    }
 
-    .header-navbar {
-        font-size: 14px;
-    }
 }

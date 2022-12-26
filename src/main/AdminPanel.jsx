@@ -28,14 +28,14 @@ export function AdminPanel() {
                         onClick={() => setAdminPanelState('users')}
                         style={adminPanelState === 'users'? activeButtonStyle : defaultButtonStyle}
                 >
-                    <span>Пользователи</span>
+                    <span className="h2">Пользователи</span>
                 </button>
 
                 <button className="moderators"
                         onClick={() => setAdminPanelState('moderators')}
                         style={adminPanelState === 'moderators'? activeButtonStyle : defaultButtonStyle}
                 >
-                    <span>Модераторы</span>
+                    <span className="h2">Модераторы</span>
                 </button>
             </div>
 

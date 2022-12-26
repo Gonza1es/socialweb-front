@@ -35,20 +35,20 @@ export function PostReactionsBlock({likeProps, comment, postId}) {
             <div className="like-button-wrapper">
                 <button className="like-button" onClick={incrementLike}>
                     <img src={likeLogo}/>
-                    <span>{like}</span>
+                    <span className="h2">{like}</span>
                 </button>
             </div>
 
             <div className="comment-button-wrapper">
                 <button className="comment-button">
                     <img src={commentLogo}></img>
-                    <span>{comment}</span>
+                    <span className="h2">{comment}</span>
                 </button>
             </div>
 
             <div className="report-button-wrapper" hidden={false}>
                 <button className="report-button" onClick={sendReport}>
-                    <span>Пожаловаться</span>
+                    <span className="h2">Пожаловаться</span>
                 </button>
             </div>
 

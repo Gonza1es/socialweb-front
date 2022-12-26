@@ -1,6 +1,20 @@
-.Search {
-    width: 100%;
+.search-button {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-self: center;
+    flex-direction: row;
+    font-size: 25px;
+    font-weight: 600;
+    color: #464C54;
+    background-color: #BFCC58;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: 10px;
+    height: min-content;
+    border: none;
+}
+
+.search-button .button-text {
+    display: flex;
+    align-self: center;
+    margin: 7px;
 }

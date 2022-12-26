@@ -1,14 +1,107 @@
 .App {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  /*align-content: center;*/
-  /*justify-content: center;*/
-  overflow: auto;
-  flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.h1 {
+    font-size: 55px;
+    line-height: 60px;
+}
+
+.big-name {
+    font-size: 38px;
+    line-height: 46px;
+}
+
+.h2, .h2::placeholder{
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.h3, .h3::placeholder {
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.text {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+
+@media only screen and (max-width: 770px){
+
+    .header-logo {
+        display: none;
+    }
+
+    .avatar {
+        display: none;
+    }
+
+    .profile-cover {
+        display: none;
+    }
+
+    .h1 {
+        display: none;
+    }
+
+    .big-name {
+        font-size: 10px!important;
+        line-height: 20px;
+    }
+
+    .h2, h2::placeholder {
+        font-size: 8px!important;
+        line-height: 15px;
+    }
+
+    .h3, .h3::placeholder {
+        font-size: 7px!important;
+        line-height: 15px;
+    }
+
+    .text {
+        font-size: 7px!important;
+        line-height: 7px;
+    }
+
+}
+
+@media only screen and (max-width: 1920px) {
+
+    .h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .big-name {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .h2, h2::placeholder {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .h3, .h3::placeholder {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
 }

@@ -9,10 +9,10 @@ export function ReceivedMessage() {
                     <Avatar/>
                 </div>
                 <div className="message-text column">
-                    <p>Господи, как же я люблю CSS, я час не мог спозиционировать сообщение....</p>
+                    <p className="text">Господи, как же я люблю CSS, я час не мог спозиционировать сообщение....</p>
                 </div>
                 <div className="sent-time column">
-                    <span>15:03</span>
+                    <span className="text">15:03</span>
                 </div>
             </div>
         </div>

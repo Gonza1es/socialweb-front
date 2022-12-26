@@ -63,15 +63,3 @@
     right: 8px;
     bottom: 6px;
 }
-
-@media only screen and (max-width: 1600px) {
-
-    .receiver-name, .last-message {
-        font-size: 16px;
-    }
-
-    .sent-received-time {
-        font-size: 14px;
-    }
-
-}
