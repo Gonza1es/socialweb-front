@@ -54,3 +54,16 @@
     margin: auto;
     height: 30px;
 }
+
+@media only screen and (max-width: 1600px) {
+
+    .like-button img, .comment-button img {
+        height: 15px;
+        margin: auto 5px;
+    }
+
+    .like-button span, .comment-button span {
+        margin: 0 10px;
+    }
+
+}

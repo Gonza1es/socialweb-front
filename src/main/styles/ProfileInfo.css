@@ -15,11 +15,11 @@
 }
 
 .profile-images-group .profile-cover {
-    /*height: 200px;*/
-    /*position: relative;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*background-size: cover;*/
+    height: 200px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-size: cover;
 }
 
 .profile-images-group .profile-avatar {
@@ -89,4 +89,9 @@
 .profile-action-button {
     display: flex;
     margin: auto;
+}
+
+.profile-buttons-group {
+    display: flex;
+    flex-direction: row;
 }

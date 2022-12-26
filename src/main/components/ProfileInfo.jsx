@@ -4,6 +4,7 @@ import {Avatar} from "./Avatar";
 import {SubscribeButton} from "./SubscribeButton";
 import {ProfileEditButton} from "./ProfileEditButton";
 import {ProfileEditor} from "./ProfileEditor";
+import {WriteMessageButton} from "./WriteMessageButton";
 
 /**
  * @description Компонент с главной информацией о профиле
@@ -21,10 +22,9 @@ export function ProfileInfo({profile, selfProfile, name}) {
 
             <div className="profile-images-group">
 
-                <div className="profile-cover resp-cover"
+                <div className="profile-cover"
                      style={
-                        // {backgroundImage: `url(${coverUrl+ profile.coverId})`}
-                     {backgroundImage: `url(${testAv})`}
+                        {backgroundImage: `url(${coverUrl+ profile.coverId})`}
                      }
                 >
                 </div>
@@ -42,13 +42,11 @@ export function ProfileInfo({profile, selfProfile, name}) {
                 <div className="profile-name-wrapper">
 
                     <div className="profile-name">
-                        {/*<span className="big-name">{profile.aliasProfile}</span>*/}
-                        <span className="big-name">@Максим Гнездилов</span>
+                        <span className="big-name">{profile.aliasProfile}</span>
                     </div>
 
                     <div className="profile-status">
-                        {/*<span className="h2">{profile.status}</span>*/}
-                        <span className="h2">Пиздес</span>
+                        <span className="h2">{profile.status}</span>
                     </div>
 
                 </div>
@@ -60,7 +58,14 @@ export function ProfileInfo({profile, selfProfile, name}) {
 
 
                 <div className="profile-action-button">
-                    {selfProfile ? <ProfileEditButton/> : <SubscribeButton isSubscribed={profile.isSubscribed} name={name}/>}
+                    {
+                        selfProfile ? <ProfileEditButton/>
+                            :
+                            <div className="profile-buttons-group">
+                                <SubscribeButton isSubscribed={profile.isSubscribed} name={name}/>
+                                <WriteMessageButton/>
+                            </div>
+                    }
                 </div>
 
                 {selfProfile ? <ProfileEditor/> : ""}

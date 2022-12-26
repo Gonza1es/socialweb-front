@@ -1,0 +1,21 @@
+.write-msg-btn-wrapper {
+    display: flex;
+}
+
+.write-msg-button {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    font-weight: 600;
+    color: #464C54;
+    background-color: #BFCC58;
+    border-radius: 15px;
+    border: none;
+}
+
+.write-msg-button .button-img {
+    display: flex;
+    align-self: center;
+    margin: 10px;
+}
+
