@@ -66,16 +66,6 @@ export function Header() {
 
                     <NavLink
                         className="h2"
-                        to="/messages"
-                        style={({ isActive }) =>
-                            isActive ? navLinkActiveStyle : navLinkStyle
-                        }
-                    >
-                        Сообщения
-                    </NavLink>
-
-                    <NavLink
-                        className="h2"
                         to="/subscriptions"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle

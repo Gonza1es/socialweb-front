@@ -63,7 +63,6 @@ export function ProfileInfo({profile, selfProfile, name}) {
                             :
                             <div className="profile-buttons-group">
                                 <SubscribeButton isSubscribed={profile.isSubscribed} name={name}/>
-                                <WriteMessageButton/>
                             </div>
                     }
                 </div>

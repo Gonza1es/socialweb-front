@@ -44,7 +44,7 @@ export function PostCard({post}) {
 
             <div className="post-card-media">
                 <div className="post-media">
-                    <img src={'http://localhost:8081/image/postImage/'+post.imageId}/>
+                    <img src={'http://localhost:8081/image/postImage/'+post.imageId} alt=""/>
                 </div>
             </div>
 

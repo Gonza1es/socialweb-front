@@ -23,9 +23,6 @@ export function SubscriptionCard({card}) {
             <Avatar img={card.avatarId} online={true}/>
             <Link to={`/user/${card.username}`} className="subscription-name">{card.username}</Link>
             <div className="button-block">
-                <button className="send-msg">
-                    <span>Написать</span>
-                </button>
                 <button className="unsubscribe" onClick={unsubscribe}>
                     <span>Отписаться</span>
                 </button>
