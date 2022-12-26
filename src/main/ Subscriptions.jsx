@@ -49,7 +49,7 @@ export function Subscriptions() {
             <Header/>
             <ContentDelimiter text={"Мои подписки"}/>
             <div className="subscriptions-count">
-                <span>Вы подписаны на {subscriptions.length} {getNumEnding(subscriptions.length, ["человека", "человека", "человек"])}.</span>
+                <span className="h2">Вы подписаны на {subscriptions.length} {getNumEnding(subscriptions.length, ["человека", "человека", "человек"])}.</span>
             </div>
             {subscriptions.map(card => <SubscriptionCard card={card}/>)}
         </div>

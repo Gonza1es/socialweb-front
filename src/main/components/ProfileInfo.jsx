@@ -21,15 +21,16 @@ export function ProfileInfo({profile, selfProfile, name}) {
 
             <div className="profile-images-group">
 
-                <div className="profile-cover"
+                <div className="profile-cover resp-cover"
                      style={
-                        {backgroundImage: `url(${coverUrl+ profile.coverId})`}
+                        // {backgroundImage: `url(${coverUrl+ profile.coverId})`}
+                     {backgroundImage: `url(${testAv})`}
                      }
                 >
                 </div>
 
                 <div className="profile-avatar">
-                    <Avatar img={profile.avatarId} online={false}/>
+                    <Avatar className={"big-av"} img={profile.avatarId} online={false}/>
                 </div>
 
             </div>
@@ -41,18 +42,20 @@ export function ProfileInfo({profile, selfProfile, name}) {
                 <div className="profile-name-wrapper">
 
                     <div className="profile-name">
-                        <span>{profile.aliasProfile}</span>
+                        {/*<span className="big-name">{profile.aliasProfile}</span>*/}
+                        <span className="big-name">@Максим Гнездилов</span>
                     </div>
 
                     <div className="profile-status">
-                        <span>{profile.status}</span>
+                        {/*<span className="h2">{profile.status}</span>*/}
+                        <span className="h2">Пиздес</span>
                     </div>
 
                 </div>
 
                 <div className="subscribers">
-                    <span className="label">Подписчики</span>
-                    <span className="count">{profile.subscribersCount}</span>
+                    <span className="label h2">Подписчики</span>
+                    <span className="count h2">{profile.subscribersCount}</span>
                 </div>
 
 
@@ -65,8 +68,4 @@ export function ProfileInfo({profile, selfProfile, name}) {
             </div>
         </div>
     )
-}
-
-function test() {
-    alert('TEST!');
 }

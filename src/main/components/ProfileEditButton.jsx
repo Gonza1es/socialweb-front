@@ -20,7 +20,7 @@ export function ProfileEditButton() {
     return (
         <div className="edit-button-wrapper">
             <button className="edit-button" onClick={popUpSelf}>
-                <span className="button-text">Редактировать</span>
+                <span className="button-text h2">Редактировать</span>
             </button>
         </div>
     )

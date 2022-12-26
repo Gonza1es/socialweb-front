@@ -32,16 +32,16 @@ export function AdminPanelUserCard({user}) {
     return (
         <div className="user-card">
             <Avatar img={user.avatarId}/>
-            <span className="user-name">{user.username} ({user.profileAlias})</span>
+            <span className="user-name h2">{user.username} ({user.profileAlias})</span>
             <div className="user-button-block">
                 <button className="go-to-profile" onClick={toProfile}>
-                    <span>Перейти в профиль</span>
+                    <span className="text">Перейти в профиль</span>
                 </button>
                 <button className="up-to-moderator" onClick={makeModerator}>
-                    <span>Сделать модератором</span>
+                    <span className="text">Сделать модератором</span>
                 </button>
                 <button className="ban-user" onClick={banUser}>
-                    <span>В бан!</span>
+                    <span className="text">В бан!</span>
                 </button>
             </div>
         </div>

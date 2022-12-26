@@ -16,9 +16,7 @@
 
 .admin-panel-header span {
     align-self: center;
-    font-size: 60px;
     font-weight: 600;
-    line-height: 72px;
 
 }
 
@@ -57,18 +55,4 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-}
-
-@media only screen and (max-width: 1600px) {
-
-    .admin-panel-header span {
-        font-size: 35px;
-    }
-
-
-
-    .admin-panel-button-group button span {
-        font-size: 15px;
-    }
-
 }

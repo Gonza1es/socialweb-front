@@ -18,15 +18,15 @@ export function CommentCard({comment}) {
 
             <div className="comment-body">
                 <div className="comment-name">
-                    <span>{comment.profileAlias}</span>
+                    <span className="h3">{comment.profileAlias}</span>
                 </div>
 
                 <div className="comment-text">
-                    <span>{comment.text}</span>
+                    <span className="h3">{comment.text}</span>
                 </div>
 
                 <div className="comment-date">
-                    <span>{comment.creationDate}</span>
+                    <span className="text">{comment.creationDate}</span>
                 </div>
             </div>
 

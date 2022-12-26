@@ -12,17 +12,5 @@
 .subscriptions-count span {
     font-family: Inter sans-serif;
     font-weight: 600;
-    font-size: 30px;
-    line-height: 36px;
     color: rgba(70, 76, 84, 1);
-}
-
-@media only screen and (max-width: 1600px) {
-
-    .subscriptions-count span {
-        font-size: 20px;
-    }
-
-
-
 }

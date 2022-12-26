@@ -11,7 +11,6 @@
 
 .received-message-wrapper .sent-time {
     flex-basis: 5%;
-    font-size: 15px;
     font-weight: 600;
     color: #464C54;
 }
@@ -24,7 +23,6 @@
 
 .received-message-wrapper .message-text p {
     margin-left: 15px;
-    font-size: 20px;
     font-weight: 400;
 }
 

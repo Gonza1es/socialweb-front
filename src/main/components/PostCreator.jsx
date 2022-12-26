@@ -40,7 +40,9 @@ export function PostCreator({avatarId}) {
 
             <div className="post-creator-body">
                 <div className="post-creator-input">
-                    <textarea placeholder="Новая запись..."
+                    <textarea
+                        className="h2"
+                        placeholder="Новая запись..."
                         value={text}
                         onChange={event => setText(event.target.value)}
                     ></textarea>
@@ -55,7 +57,7 @@ export function PostCreator({avatarId}) {
                 </form>
 
                 <button className="post-creator-publish-button" onClick={submitHandler}>
-                    <span>Опубликовать</span>
+                    <span className="h3">Опубликовать</span>
                 </button>
             </div>
         </div>

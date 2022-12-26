@@ -22,8 +22,6 @@
     margin-left: 10px;
     align-self: center;
     font-weight: bolder;
-    line-height: 60px;
-    font-size: 55px;
     color: #BFCC58;
 }
 
@@ -41,11 +39,11 @@
     .header-logo {
         height: 45px;
     }
-    .header-logo span {
-        font-size: 30px;
-    }
+    /*.header-logo span {*/
+    /*    font-size: 30px;*/
+    /*}*/
 
-    .header-navbar {
-        font-size: 14px;
-    }
+    /*.header-navbar {*/
+    /*    font-size: 14px;*/
+    /*}*/
 }

@@ -24,20 +24,20 @@ export function PostCard({post}) {
 
                 <div className="post-body">
                     <div className="post-metadata">
-                        <div className="post-owner-name">
+                        <div className="post-owner-name h2">
                             <span>{post.aliasProfile}</span>
                         </div>
 
-                        <span className="post-meta-delimiter">&bull;</span>
+                        <span className="post-meta-delimiter h3">&bull;</span>
 
-                        <div className="post-date">
+                        <div className="post-date h3">
                             <span>{post.creationDate}</span>
                         </div>
 
                     </div>
 
                     <div className="post-text">
-                        <span>{post.text}</span>
+                        <span className="text">{post.text}</span>
                     </div>
                 </div>
             </div>

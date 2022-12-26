@@ -14,23 +14,12 @@
     left: 0;
 }
 
-.profile-cover img {
-    /*width: 100%;*/
-    /*object-position: 20% 10%; !* try 20px 10px *!*/
-    /*height: auto;*/
-    /*max-height: 200px;*/
-    /*object-fit: scale-down;*/
-    /*object-position: center;*/
-
-}
-
 .profile-images-group .profile-cover {
-    height: 200px;
-    position: relative;
-    top: 0;
-    left: 0;
-    background-size: cover;
-
+    /*height: 200px;*/
+    /*position: relative;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*background-size: cover;*/
 }
 
 .profile-images-group .profile-avatar {
@@ -100,29 +89,4 @@
 .profile-action-button {
     display: flex;
     margin: auto;
-}
-
-@media only screen and (max-width: 1600px) {
-
-    .profile-images-group .profile-cover {
-        height: 150px;
-    }
-
-    .profile-name {
-        font-size: 19px;
-    }
-
-    .profile-status {
-        font-size: 16px;
-    }
-
-    .subscribers .label, .subscribers .count {
-        font-size: 19px;
-    }
-
-    .profile-action-button .button-text {
-        font-size: 19px;
-    }
-
-
 }

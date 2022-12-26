@@ -31,7 +31,7 @@ export function CommentWriter({avatarId, postId}) {
                 <Avatar img={avatar}/>
             </div>
             <form className="writer-body">
-                <input type="text" placeholder="Оставить комментарий..." required
+                <input className="h3" type="text" placeholder="Оставить комментарий..." required
                     value={textValue}
                     onChange={event => setTextValue(event.target.value)}
                 />

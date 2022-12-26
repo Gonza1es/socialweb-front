@@ -17,7 +17,7 @@ export function ActiveChat(props) {
                                 <Avatar/>
                             </div>
                             <div className="companion-name">
-                                <span>@Максим Гнездилов</span>
+                                <span className="h2">@Максим Гнездилов</span>
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@ export function ActiveChat(props) {
                     :
 
                     <div className="none-chat">
-                        <span>Выберите диалог</span>
+                        <span className="h2">Выберите диалог</span>
                     </div>
             }
         </div>

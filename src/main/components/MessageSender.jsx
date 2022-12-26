@@ -11,7 +11,7 @@ export function MessageSender() {
     return (
         <div className="message-sender-wrapper">
             <form className="sender-body">
-                <input type="text" placeholder="Написать сообщение..." required/>
+                <input className="text" type="text" placeholder="Написать сообщение..." required/>
                 <button onClick={submitHandler}>
                     <img src={sendLogo}/>
                 </button>

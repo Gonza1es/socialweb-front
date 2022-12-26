@@ -7,7 +7,6 @@
 .active-chat-wrapper .none-chat {
     margin: auto;
     color: #464C54;
-    font-size: 40px;
 }
 
 
@@ -38,7 +37,6 @@
 }
 
 .active-chat-header .companion-name {
-    font-size: 25px;
     font-weight: 600;
 }
 

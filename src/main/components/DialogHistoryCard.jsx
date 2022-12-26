@@ -11,16 +11,16 @@ export function DialogHistoryCard() {
             <div className="card-body">
                 <div className="card-meta">
                     <div className="receiver-name">
-                        <span>@Дорогой Брат</span>
+                        <span className="h3">@Дорогой Брат</span>
                     </div>
 
                     <div className="sent-received-time">
-                        <span>15:03</span>
+                        <span className="text">15:03</span>
                     </div>
                 </div>
 
                 <div className="last-message">
-                    <span>Салам Аллейкум</span>
+                    <span className="text">Салам Аллейкум</span>
                 </div>
             </div>
         </div>

@@ -13,10 +13,7 @@ export function Header() {
         margin: "auto",
         outline: "none",
         textDecoration: "none",
-        color: "#464C54",
-        fontSize: "21px",
-        fontWeight: "600",
-        lineHeight: "25px"
+        color: "#464C54"
     };
 
     const navLinkActiveStyle = {
@@ -24,9 +21,6 @@ export function Header() {
         outline: "none",
         textDecoration: "none",
         color: "#6D7783",
-        fontSize: "21px",
-        fontWeight: "600",
-        lineHeight: "25px",
         textDecorationLine: "underline",
         textUnderlineOffset: "7px"
     };
@@ -36,11 +30,12 @@ export function Header() {
             <div className="header">
                 <div className="header-logo">
                     <img src={logo}/>
-                    <span>SaraFun</span>
+                    <span className="h1">SaraFun</span>
                 </div>
 
                 <div className="header-navbar">
                     <NavLink
+                        className="h2"
                         to="/my-profile"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle
@@ -50,6 +45,7 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
+                        className="h2"
                         to="/feed"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle
@@ -59,6 +55,7 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
+                        className="h2"
                         to={"/search"}
                         style={({isActive}) =>
                             isActive ? navLinkActiveStyle : navLinkStyle
@@ -68,6 +65,7 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
+                        className="h2"
                         to="/messages"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle
@@ -77,6 +75,7 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
+                        className="h2"
                         to="/subscriptions"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle
@@ -86,6 +85,7 @@ export function Header() {
                     </NavLink>
 
                     <NavLink
+                        className="h2"
                         to="/"
                         style={({ isActive }) =>
                             isActive ? navLinkActiveStyle : navLinkStyle

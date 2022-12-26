@@ -47,7 +47,7 @@ export function SubscribeButton({isSubscribed, name}) {
             <button className="subscribe-button" onClick={handleButtonStateChange}>
                 {/*{subscriptionStatus? setButtonText("Вы подписаны") : setButtonText("Подписаться")}*/}
                 <img className="button-img" src={okLogo} style={subscriptionStatus? {} : {display: "none"}}/>
-                <span className="button-text">{buttonText}</span>
+                <span className="button-text h2">{buttonText}</span>
             </button>
         </div>
     )

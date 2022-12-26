@@ -22,16 +22,16 @@ export function AdminPanelModeratorCard({moderator}) {
     return (
         <div className="user-card">
             <Avatar img={moderator.avatarId} online={true}/>
-            <span className="user-name">{moderator.username} ({moderator.profileAlias})</span>
+            <span className="user-name h2">{moderator.username} ({moderator.profileAlias})</span>
             <div className="user-button-block">
                 <button className="go-to-profile" onClick={toProfile}>
-                    <span>Перейти в профиль</span>
+                    <span className="text">Перейти в профиль</span>
                 </button>
                 <button className="back-to-user" onClick={makeUser}>
-                    <span>Сделать пользователем</span>
+                    <span className="text">Сделать пользователем</span>
                 </button>
                 <button className="ban-user">
-                    <span>В бан!</span>
+                    <span className="text">В бан!</span>
                 </button>
             </div>
         </div>
