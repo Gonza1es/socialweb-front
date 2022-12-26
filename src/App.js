@@ -11,7 +11,7 @@ import {UserProfile} from "./main/UserProfile";
 import {ModeratorAuth} from "./auth/ModeratorAuth";
 import {AdminAuth} from "./auth/AdminAuth";
 import {Messages} from "./main/Messages";
-import {SearchUser} from "./main/components/SearchUser";
+import {SearchUser} from "./main/SearchUser";
 
 function App() {
     return (
